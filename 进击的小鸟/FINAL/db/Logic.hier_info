@@ -1,0 +1,1276 @@
+|Logic
+FPGAC_Ram_Data[0] => vga_rom:u1.FPGAC_Ram_Data[0]
+FPGAC_Ram_Data[1] => vga_rom:u1.FPGAC_Ram_Data[1]
+FPGAC_Ram_Data[2] => vga_rom:u1.FPGAC_Ram_Data[2]
+FPGAC_Ram_Data[3] => vga_rom:u1.FPGAC_Ram_Data[3]
+FPGAC_Ram_Data[4] => vga_rom:u1.FPGAC_Ram_Data[4]
+FPGAC_Ram_Data[5] => vga_rom:u1.FPGAC_Ram_Data[5]
+FPGAC_Ram_Data[6] => vga_rom:u1.FPGAC_Ram_Data[6]
+FPGAC_Ram_Data[7] => vga_rom:u1.FPGAC_Ram_Data[7]
+FPGAC_Ram_Data[8] => vga_rom:u1.FPGAC_Ram_Data[8]
+FPGAC_Ram_Data[9] => vga_rom:u1.FPGAC_Ram_Data[9]
+FPGAC_Ram_Data[10] => vga_rom:u1.FPGAC_Ram_Data[10]
+FPGAC_Ram_Data[11] => vga_rom:u1.FPGAC_Ram_Data[11]
+FPGAC_Ram_Data[12] => vga_rom:u1.FPGAC_Ram_Data[12]
+FPGAC_Ram_Data[13] => vga_rom:u1.FPGAC_Ram_Data[13]
+FPGAC_Ram_Data[14] => vga_rom:u1.FPGAC_Ram_Data[14]
+FPGAC_Ram_Data[15] => vga_rom:u1.FPGAC_Ram_Data[15]
+FPGAC_Ram_Data[16] => vga_rom:u1.FPGAC_Ram_Data[16]
+FPGAC_Ram_Data[17] => vga_rom:u1.FPGAC_Ram_Data[17]
+FPGAC_Ram_Data[18] => vga_rom:u1.FPGAC_Ram_Data[18]
+FPGAC_Ram_Data[19] => vga_rom:u1.FPGAC_Ram_Data[19]
+FPGAC_Ram_Data[20] => vga_rom:u1.FPGAC_Ram_Data[20]
+FPGAC_Ram_Data[21] => vga_rom:u1.FPGAC_Ram_Data[21]
+FPGAC_Ram_Data[22] => vga_rom:u1.FPGAC_Ram_Data[22]
+FPGAC_Ram_Data[23] => vga_rom:u1.FPGAC_Ram_Data[23]
+FPGAC_Ram_Data[24] => vga_rom:u1.FPGAC_Ram_Data[24]
+FPGAC_Ram_Data[25] => vga_rom:u1.FPGAC_Ram_Data[25]
+FPGAC_Ram_Data[26] => vga_rom:u1.FPGAC_Ram_Data[26]
+FPGAC_Ram_Data[27] => vga_rom:u1.FPGAC_Ram_Data[27]
+FPGAC_Ram_Data[28] => vga_rom:u1.FPGAC_Ram_Data[28]
+FPGAC_Ram_Data[29] => vga_rom:u1.FPGAC_Ram_Data[29]
+FPGAC_Ram_Data[30] => vga_rom:u1.FPGAC_Ram_Data[30]
+FPGAC_Ram_Data[31] => vga_rom:u1.FPGAC_Ram_Data[31]
+FPGAE_RamAdd[0] <= vga_rom:u1.FPGAE_RamAdd[0]
+FPGAE_RamAdd[1] <= vga_rom:u1.FPGAE_RamAdd[1]
+FPGAE_RamAdd[2] <= vga_rom:u1.FPGAE_RamAdd[2]
+FPGAE_RamAdd[3] <= vga_rom:u1.FPGAE_RamAdd[3]
+FPGAE_RamAdd[4] <= vga_rom:u1.FPGAE_RamAdd[4]
+FPGAE_RamAdd[5] <= vga_rom:u1.FPGAE_RamAdd[5]
+FPGAE_RamAdd[6] <= vga_rom:u1.FPGAE_RamAdd[6]
+FPGAE_RamAdd[7] <= vga_rom:u1.FPGAE_RamAdd[7]
+FPGAE_RamAdd[8] <= vga_rom:u1.FPGAE_RamAdd[8]
+FPGAE_RamAdd[9] <= vga_rom:u1.FPGAE_RamAdd[9]
+FPGAE_RamAdd[10] <= vga_rom:u1.FPGAE_RamAdd[10]
+FPGAE_RamAdd[11] <= vga_rom:u1.FPGAE_RamAdd[11]
+FPGAE_RamAdd[12] <= vga_rom:u1.FPGAE_RamAdd[12]
+FPGAE_RamAdd[13] <= vga_rom:u1.FPGAE_RamAdd[13]
+FPGAE_RamAdd[14] <= vga_rom:u1.FPGAE_RamAdd[14]
+FPGAE_RamAdd[15] <= vga_rom:u1.FPGAE_RamAdd[15]
+FPGAE_RamAdd[16] <= vga_rom:u1.FPGAE_RamAdd[16]
+FPGAE_RamAdd[17] <= vga_rom:u1.FPGAE_RamAdd[17]
+FPGAE_RamAdd[18] <= vga_rom:u1.FPGAE_RamAdd[18]
+FPGAE_RamAdd[19] <= vga_rom:u1.FPGAE_RamAdd[19]
+FPGAE_RamAdd[20] <= vga_rom:u1.FPGAE_RamAdd[20]
+FPGAC_RamRW[0] <= vga_rom:u1.FPGAC_RamRW[0]
+FPGAC_RamRW[1] <= vga_rom:u1.FPGAC_RamRW[1]
+clk24M => wm8731_controller:u2.clk24M
+i2c_sclk <= wm8731_controller:u2.i2c_sclk
+i2c_sdat <> wm8731_controller:u2.i2c_sdat
+MCLK <= wm8731_controller:u2.MCLK
+BCLK => wm8731_controller:u2.BCLK
+ADCLRC => wm8731_controller:u2.ADCLRC
+ADCDAT => wm8731_controller:u2.ADCDAT
+grade_display[0] <= wm8731_controller:u2.grade_display[0]
+grade_display[1] <= wm8731_controller:u2.grade_display[1]
+grade_display[2] <= wm8731_controller:u2.grade_display[2]
+grade_display[3] <= wm8731_controller:u2.grade_display[3]
+grade_display[4] <= wm8731_controller:u2.grade_display[4]
+grade_display[5] <= wm8731_controller:u2.grade_display[5]
+grade_display[6] <= wm8731_controller:u2.grade_display[6]
+seg2[0] <= seg2[0].DB_MAX_OUTPUT_PORT_TYPE
+seg2[1] <= seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[2] <= seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[3] <= seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] <= seg2[4].DB_MAX_OUTPUT_PORT_TYPE
+seg2[5] <= seg2.DB_MAX_OUTPUT_PORT_TYPE
+seg2[6] <= seg2.DB_MAX_OUTPUT_PORT_TYPE
+clk => clockDivision:u0.in_clk
+clk => vga_rom:u1.clk_0
+clk => wm8731_controller:u2.clk100M
+reset => vga_rom:u1.reset
+reset => wm8731_controller:u2.rst
+hs <= vga_rom:u1.hs
+vs <= vga_rom:u1.vs
+r[0] <= vga_rom:u1.r[0]
+r[1] <= vga_rom:u1.r[1]
+r[2] <= vga_rom:u1.r[2]
+g[0] <= vga_rom:u1.g[0]
+g[1] <= vga_rom:u1.g[1]
+g[2] <= vga_rom:u1.g[2]
+b[0] <= vga_rom:u1.b[0]
+b[1] <= vga_rom:u1.b[1]
+b[2] <= vga_rom:u1.b[2]
+
+
+|Logic|clockDivision:u0
+in_clk => singleClkDiv:u1.in_clk
+clk_m25 <= singleClkDiv:u2.out_clk
+clk_s24 <= singleClkDiv:u22.out_clk
+pulse_s24_min2 <= Pulse:t1.clk_out
+pulse_s24_s2 <= Pulse:t3.clk_out
+pulse_s24_s3 <= Pulse:t0.clk_out
+pulse_s191_s24 <= Pulse:t2.clk_out
+
+
+|Logic|clockDivision:u0|Pulse:t0
+clk_h => last.CLK
+clk_h => clk_out~reg0.CLK
+clk_l => process_0.IN1
+clk_l => last.DATAIN
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|Pulse:t1
+clk_h => last.CLK
+clk_h => clk_out~reg0.CLK
+clk_l => process_0.IN1
+clk_l => last.DATAIN
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|Pulse:t2
+clk_h => last.CLK
+clk_h => clk_out~reg0.CLK
+clk_l => process_0.IN1
+clk_l => last.DATAIN
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|Pulse:t3
+clk_h => last.CLK
+clk_h => clk_out~reg0.CLK
+clk_l => process_0.IN1
+clk_l => last.DATAIN
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u1
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u2
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u3
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u4
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u5
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u6
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u7
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u8
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u9
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u10
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u11
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u12
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u13
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u14
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u15
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u16
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u17
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u18
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u19
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u20
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u21
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u22
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u23
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u24
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u25
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u26
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:u27
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:min0
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:min1
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|clockDivision:u0|singleClkDiv:min2
+in_clk => out_clk~reg0.CLK
+aim_clk => out_clk~reg0.DATAIN
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|vga_rom:u1
+FPGAC_Ram_Data[0] => q_tmp[0].DATAIN
+FPGAC_Ram_Data[1] => q_tmp[1].DATAIN
+FPGAC_Ram_Data[2] => q_tmp[2].DATAIN
+FPGAC_Ram_Data[3] => q_tmp[3].DATAIN
+FPGAC_Ram_Data[4] => q_tmp[4].DATAIN
+FPGAC_Ram_Data[5] => q_tmp[5].DATAIN
+FPGAC_Ram_Data[6] => q_tmp[6].DATAIN
+FPGAC_Ram_Data[7] => q_tmp[7].DATAIN
+FPGAC_Ram_Data[8] => q_tmp[8].DATAIN
+FPGAC_Ram_Data[9] => ~NO_FANOUT~
+FPGAC_Ram_Data[10] => ~NO_FANOUT~
+FPGAC_Ram_Data[11] => ~NO_FANOUT~
+FPGAC_Ram_Data[12] => ~NO_FANOUT~
+FPGAC_Ram_Data[13] => ~NO_FANOUT~
+FPGAC_Ram_Data[14] => ~NO_FANOUT~
+FPGAC_Ram_Data[15] => ~NO_FANOUT~
+FPGAC_Ram_Data[16] => ~NO_FANOUT~
+FPGAC_Ram_Data[17] => ~NO_FANOUT~
+FPGAC_Ram_Data[18] => ~NO_FANOUT~
+FPGAC_Ram_Data[19] => ~NO_FANOUT~
+FPGAC_Ram_Data[20] => ~NO_FANOUT~
+FPGAC_Ram_Data[21] => ~NO_FANOUT~
+FPGAC_Ram_Data[22] => ~NO_FANOUT~
+FPGAC_Ram_Data[23] => ~NO_FANOUT~
+FPGAC_Ram_Data[24] => ~NO_FANOUT~
+FPGAC_Ram_Data[25] => ~NO_FANOUT~
+FPGAC_Ram_Data[26] => ~NO_FANOUT~
+FPGAC_Ram_Data[27] => ~NO_FANOUT~
+FPGAC_Ram_Data[28] => ~NO_FANOUT~
+FPGAC_Ram_Data[29] => ~NO_FANOUT~
+FPGAC_Ram_Data[30] => ~NO_FANOUT~
+FPGAC_Ram_Data[31] => ~NO_FANOUT~
+FPGAE_RamAdd[0] <= FPGAE_RamAdd[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[1] <= FPGAE_RamAdd[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[2] <= FPGAE_RamAdd[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[3] <= FPGAE_RamAdd[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[4] <= FPGAE_RamAdd[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[5] <= FPGAE_RamAdd[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[6] <= FPGAE_RamAdd[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[7] <= FPGAE_RamAdd[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[8] <= FPGAE_RamAdd[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[9] <= FPGAE_RamAdd[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[10] <= FPGAE_RamAdd[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[11] <= FPGAE_RamAdd[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[12] <= FPGAE_RamAdd[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[13] <= FPGAE_RamAdd[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[14] <= FPGAE_RamAdd[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[15] <= FPGAE_RamAdd[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[16] <= FPGAE_RamAdd[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[17] <= FPGAE_RamAdd[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[18] <= FPGAE_RamAdd[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[19] <= FPGAE_RamAdd[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAE_RamAdd[20] <= FPGAE_RamAdd[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FPGAC_RamRW[0] <= <VCC>
+FPGAC_RamRW[1] <= <VCC>
+clk_0 => vga640480:u1.clk_0
+reset => vga640480:u1.reset
+hs <= vga640480:u1.hs
+vs <= vga640480:u1.vs
+x[0] <= vga640480:u1.x[0]
+x[1] <= vga640480:u1.x[1]
+x[2] <= vga640480:u1.x[2]
+x[3] <= vga640480:u1.x[3]
+x[4] <= vga640480:u1.x[4]
+x[5] <= vga640480:u1.x[5]
+x[6] <= vga640480:u1.x[6]
+x[7] <= vga640480:u1.x[7]
+x[8] <= vga640480:u1.x[8]
+x[9] <= vga640480:u1.x[9]
+y[0] <= vga640480:u1.y[0]
+y[1] <= vga640480:u1.y[1]
+y[2] <= vga640480:u1.y[2]
+y[3] <= vga640480:u1.y[3]
+y[4] <= vga640480:u1.y[4]
+y[5] <= vga640480:u1.y[5]
+y[6] <= vga640480:u1.y[6]
+y[7] <= vga640480:u1.y[7]
+y[8] <= vga640480:u1.y[8]
+y[9] <= vga640480:u1.y[9]
+cate[0] => Equal0.IN2
+cate[0] => Equal1.IN2
+cate[0] => Equal2.IN1
+cate[0] => Equal3.IN2
+cate[0] => Equal4.IN1
+cate[0] => Equal5.IN2
+cate[0] => Equal6.IN0
+cate[0] => Equal7.IN2
+cate[1] => Equal0.IN1
+cate[1] => Equal1.IN1
+cate[1] => Equal2.IN2
+cate[1] => Equal3.IN1
+cate[1] => Equal4.IN0
+cate[1] => Equal5.IN0
+cate[1] => Equal6.IN2
+cate[1] => Equal7.IN1
+cate[2] => Equal0.IN0
+cate[2] => Equal1.IN0
+cate[2] => Equal2.IN0
+cate[2] => Equal3.IN0
+cate[2] => Equal4.IN2
+cate[2] => Equal5.IN1
+cate[2] => Equal6.IN1
+cate[2] => Equal7.IN0
+posx[0] => Add0.IN42
+posx[0] => Add2.IN42
+posx[0] => Add4.IN20
+posx[0] => Add7.IN42
+posx[0] => Add8.IN20
+posx[0] => Add10.IN20
+posx[0] => Add13.IN44
+posx[0] => Add15.IN44
+posx[1] => Add0.IN41
+posx[1] => Add1.IN18
+posx[1] => Add4.IN19
+posx[1] => Add7.IN41
+posx[1] => Add8.IN19
+posx[1] => Add10.IN19
+posx[1] => Add13.IN43
+posx[1] => Add15.IN43
+posx[2] => Add0.IN40
+posx[2] => Add1.IN17
+posx[2] => Add4.IN18
+posx[2] => Add7.IN40
+posx[2] => Add8.IN18
+posx[2] => Add10.IN18
+posx[2] => Add13.IN42
+posx[2] => Add15.IN42
+posx[3] => Add0.IN39
+posx[3] => Add1.IN16
+posx[3] => Add4.IN17
+posx[3] => Add7.IN39
+posx[3] => Add8.IN17
+posx[3] => Add10.IN17
+posx[3] => Add13.IN41
+posx[3] => Add15.IN41
+posx[4] => Add0.IN38
+posx[4] => Add1.IN15
+posx[4] => Add4.IN16
+posx[4] => Add6.IN12
+posx[4] => Add8.IN16
+posx[4] => Add10.IN16
+posx[4] => Add13.IN40
+posx[4] => Add15.IN40
+posx[5] => Add0.IN37
+posx[5] => Add1.IN14
+posx[5] => Add4.IN15
+posx[5] => Add6.IN11
+posx[5] => Add8.IN15
+posx[5] => Add10.IN15
+posx[5] => Add13.IN39
+posx[5] => Add15.IN39
+posx[6] => Add0.IN36
+posx[6] => Add1.IN13
+posx[6] => Add4.IN14
+posx[6] => Add6.IN10
+posx[6] => Add8.IN14
+posx[6] => Add10.IN14
+posx[6] => Add13.IN38
+posx[6] => Add15.IN38
+posx[7] => Add0.IN35
+posx[7] => Add1.IN12
+posx[7] => Add4.IN13
+posx[7] => Add6.IN9
+posx[7] => Add8.IN13
+posx[7] => Add10.IN13
+posx[7] => Add13.IN37
+posx[7] => Add15.IN37
+posx[8] => Add0.IN34
+posx[8] => Add1.IN11
+posx[8] => Add4.IN12
+posx[8] => Add6.IN8
+posx[8] => Add8.IN12
+posx[8] => Add10.IN12
+posx[8] => Add13.IN36
+posx[8] => Add15.IN36
+posx[9] => Add0.IN33
+posx[9] => Add1.IN10
+posx[9] => Add4.IN11
+posx[9] => Add6.IN7
+posx[9] => Add8.IN11
+posx[9] => Add10.IN11
+posx[9] => Add13.IN35
+posx[9] => Add15.IN35
+posy[0] => Mult0.IN21
+posy[0] => Mult1.IN20
+posy[0] => Mult2.IN21
+posy[0] => Add14.IN20
+posy[1] => Mult0.IN20
+posy[1] => Mult1.IN19
+posy[1] => Add12.IN18
+posy[1] => Add14.IN19
+posy[2] => Add3.IN16
+posy[2] => Mult1.IN18
+posy[2] => Add12.IN17
+posy[2] => Add14.IN18
+posy[3] => Add3.IN15
+posy[3] => Mult1.IN17
+posy[3] => Add12.IN16
+posy[3] => Add14.IN17
+posy[4] => Add3.IN14
+posy[4] => Mult1.IN16
+posy[4] => Add12.IN15
+posy[4] => Add14.IN16
+posy[5] => Add3.IN13
+posy[5] => Mult1.IN15
+posy[5] => Add12.IN14
+posy[5] => Add14.IN15
+posy[6] => Add3.IN12
+posy[6] => Mult1.IN14
+posy[6] => Add12.IN13
+posy[6] => Add14.IN14
+posy[7] => Add3.IN11
+posy[7] => Mult1.IN13
+posy[7] => Add12.IN12
+posy[7] => Add14.IN13
+posy[8] => Add3.IN10
+posy[8] => Mult1.IN12
+posy[8] => Add12.IN11
+posy[8] => Add14.IN12
+posy[9] => Add3.IN9
+posy[9] => Mult1.IN11
+posy[9] => Add12.IN10
+posy[9] => Add14.IN11
+r[0] <= vga640480:u1.r[0]
+r[1] <= vga640480:u1.r[1]
+r[2] <= vga640480:u1.r[2]
+g[0] <= vga640480:u1.g[0]
+g[1] <= vga640480:u1.g[1]
+g[2] <= vga640480:u1.g[2]
+b[0] <= vga640480:u1.b[0]
+b[1] <= vga640480:u1.b[1]
+b[2] <= vga640480:u1.b[2]
+
+
+|Logic|vga_rom:u1|vga640480:u1
+x[0] <= x[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= x[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= x[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[10] <= x[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[11] <= x[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[12] <= x[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[13] <= x[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[14] <= x[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[15] <= x[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[16] <= x[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[17] <= x[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[18] <= x[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[19] <= x[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[20] <= x[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[21] <= x[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[22] <= x[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[23] <= x[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[24] <= x[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[25] <= x[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[26] <= x[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[27] <= x[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[28] <= x[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[29] <= x[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[30] <= x[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[31] <= x[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= y[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= y[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[12] <= y[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[13] <= y[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[14] <= y[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[15] <= y[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[16] <= y[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[17] <= y[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[18] <= y[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[19] <= y[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[20] <= y[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[21] <= y[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[22] <= y[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[23] <= y[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[24] <= y[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[25] <= y[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[26] <= y[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[27] <= y[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[28] <= y[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[29] <= y[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[30] <= y[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[31] <= y[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => b1[0].ACLR
+reset => b1[1].ACLR
+reset => b1[2].ACLR
+reset => g1[0].ACLR
+reset => g1[1].ACLR
+reset => g1[2].ACLR
+reset => r1[0].ACLR
+reset => r1[1].ACLR
+reset => r1[2].ACLR
+reset => hs~reg0.ACLR
+reset => vs~reg0.ACLR
+reset => vector_x[0].ACLR
+reset => vector_x[1].ACLR
+reset => vector_x[2].ACLR
+reset => vector_x[3].ACLR
+reset => vector_x[4].ACLR
+reset => vector_x[5].ACLR
+reset => vector_x[6].ACLR
+reset => vector_x[7].ACLR
+reset => vector_x[8].ACLR
+reset => vector_x[9].ACLR
+reset => vector_y[0].ACLR
+reset => vector_y[1].ACLR
+reset => vector_y[2].ACLR
+reset => vector_y[3].ACLR
+reset => vector_y[4].ACLR
+reset => vector_y[5].ACLR
+reset => vector_y[6].ACLR
+reset => vector_y[7].ACLR
+reset => vector_y[8].ACLR
+reset => hs1.PRESET
+reset => vs1.PRESET
+reset => x[31]~reg0.ENA
+reset => x[30]~reg0.ENA
+reset => x[29]~reg0.ENA
+reset => x[28]~reg0.ENA
+reset => x[27]~reg0.ENA
+reset => x[26]~reg0.ENA
+reset => x[25]~reg0.ENA
+reset => x[24]~reg0.ENA
+reset => x[23]~reg0.ENA
+reset => x[22]~reg0.ENA
+reset => x[21]~reg0.ENA
+reset => x[20]~reg0.ENA
+reset => x[19]~reg0.ENA
+reset => x[18]~reg0.ENA
+reset => x[17]~reg0.ENA
+reset => x[16]~reg0.ENA
+reset => x[15]~reg0.ENA
+reset => x[14]~reg0.ENA
+reset => x[13]~reg0.ENA
+reset => x[12]~reg0.ENA
+reset => x[11]~reg0.ENA
+reset => x[10]~reg0.ENA
+reset => x[9]~reg0.ENA
+reset => x[8]~reg0.ENA
+reset => x[7]~reg0.ENA
+reset => x[6]~reg0.ENA
+reset => x[5]~reg0.ENA
+reset => x[4]~reg0.ENA
+reset => x[3]~reg0.ENA
+reset => x[2]~reg0.ENA
+reset => x[1]~reg0.ENA
+reset => x[0]~reg0.ENA
+reset => y[31]~reg0.ENA
+reset => y[30]~reg0.ENA
+reset => y[29]~reg0.ENA
+reset => y[28]~reg0.ENA
+reset => y[27]~reg0.ENA
+reset => y[26]~reg0.ENA
+reset => y[25]~reg0.ENA
+reset => y[24]~reg0.ENA
+reset => y[23]~reg0.ENA
+reset => y[22]~reg0.ENA
+reset => y[21]~reg0.ENA
+reset => y[20]~reg0.ENA
+reset => y[19]~reg0.ENA
+reset => y[18]~reg0.ENA
+reset => y[17]~reg0.ENA
+reset => y[16]~reg0.ENA
+reset => y[15]~reg0.ENA
+reset => y[14]~reg0.ENA
+reset => y[13]~reg0.ENA
+reset => y[12]~reg0.ENA
+reset => y[11]~reg0.ENA
+reset => y[10]~reg0.ENA
+reset => y[9]~reg0.ENA
+reset => y[8]~reg0.ENA
+reset => y[7]~reg0.ENA
+reset => y[6]~reg0.ENA
+reset => y[5]~reg0.ENA
+reset => y[4]~reg0.ENA
+reset => y[3]~reg0.ENA
+reset => y[2]~reg0.ENA
+reset => y[1]~reg0.ENA
+reset => y[0]~reg0.ENA
+clk25 <= clk.DB_MAX_OUTPUT_PORT_TYPE
+q[0] => b1.DATAB
+q[1] => b1.DATAB
+q[2] => b1.DATAB
+q[3] => g1.DATAB
+q[4] => g1.DATAB
+q[5] => g1.DATAB
+q[6] => r1.DATAB
+q[7] => r1.DATAB
+q[8] => r1.DATAB
+clk_0 => clk1.CLK
+hs <= hs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vs <= vs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= r.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= g.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2
+clk100M => frequency100M_to_20K:c1.clk100M
+clk100M => i2c_controller:u1.clk100M
+clk100M => cur_state~1.DATAIN
+clk24M => frequency24M_to_12M:c2.clk24M
+rst => i2c_controller:u1.rst
+rst => i2s_to_parallel:u2.rst
+rst => cur_state~3.DATAIN
+i2c_sclk <= i2c_controller:u1.i2c_sclk
+i2c_sdat <> i2c_controller:u1.i2c_sdat
+MCLK <= frequency24M_to_12M:c2.clk12M
+BCLK => i2s_to_parallel:u2.BCLK
+ADCLRC => i2s_to_parallel:u2.ADCLRC
+ADCDAT => i2s_to_parallel:u2.ADCDAT
+grade_display[0] <= decoder:d4.output[0]
+grade_display[1] <= decoder:d4.output[1]
+grade_display[2] <= decoder:d4.output[2]
+grade_display[3] <= decoder:d4.output[3]
+grade_display[4] <= decoder:d4.output[4]
+grade_display[5] <= decoder:d4.output[5]
+grade_display[6] <= decoder:d4.output[6]
+up <= audio_analyse:u3.up
+shoot <= audio_analyse:u3.shoot
+clk_operate => audio_analyse:u3.clk_operate
+
+
+|Logic|wm8731_controller:u2|frequency100M_to_20K:c1
+clk100M => clk_20KHz_temp.CLK
+clk100M => clk_20KHz_counter[0].CLK
+clk100M => clk_20KHz_counter[1].CLK
+clk100M => clk_20KHz_counter[2].CLK
+clk100M => clk_20KHz_counter[3].CLK
+clk100M => clk_20KHz_counter[4].CLK
+clk100M => clk_20KHz_counter[5].CLK
+clk100M => clk_20KHz_counter[6].CLK
+clk100M => clk_20KHz_counter[7].CLK
+clk100M => clk_20KHz_counter[8].CLK
+clk100M => clk_20KHz_counter[9].CLK
+clk100M => clk_20KHz_counter[10].CLK
+clk100M => clk_20KHz_counter[11].CLK
+clk20K <= clk_20KHz_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2|frequency24M_to_12M:c2
+clk24M => clk12MHz_temp.CLK
+clk12M <= clk12MHz_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2|i2c_controller:u1
+clk100M => ~NO_FANOUT~
+clk20K => index[0].CLK
+clk20K => index[1].CLK
+clk20K => index[2].CLK
+clk20K => index[3].CLK
+clk20K => ack3.CLK
+clk20K => ack2.CLK
+clk20K => ack1.CLK
+clk20K => step[0].CLK
+clk20K => step[1].CLK
+clk20K => step[2].CLK
+clk20K => step[3].CLK
+clk20K => step[4].CLK
+clk20K => step[5].CLK
+clk20K => step[6].CLK
+clk20K => step[7].CLK
+clk20K => tr_end~reg0.CLK
+clk20K => i2c_sdat~reg0.CLK
+clk20K => i2c_sdat~en.CLK
+clk20K => i2c_sclk~reg0.CLK
+rst => ~NO_FANOUT~
+i2c_sclk <= i2c_sclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+i2c_sdat <> i2c_sdat
+tr_run => i2c_sdat.IN1
+tr_run => tr_end~reg0.ACLR
+tr_run => step[7].ACLR
+tr_run => step[6].ACLR
+tr_run => step[5].ACLR
+tr_run => step[4].ACLR
+tr_run => step[3].ACLR
+tr_run => step[2].ACLR
+tr_run => step[1].ACLR
+tr_run => step[0].ACLR
+tr_run => index[0].ENA
+tr_run => i2c_sclk~reg0.ENA
+tr_run => ack1.ENA
+tr_run => ack2.ENA
+tr_run => ack3.ENA
+tr_run => index[3].ENA
+tr_run => index[2].ENA
+tr_run => index[1].ENA
+tr_end <= tr_end~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2|i2s_to_parallel:u2
+BCLK => readylr~reg0.CLK
+BCLK => data_out[0]~reg0.CLK
+BCLK => data_out[1]~reg0.CLK
+BCLK => data_out[2]~reg0.CLK
+BCLK => data_out[3]~reg0.CLK
+BCLK => data_out[4]~reg0.CLK
+BCLK => data_out[5]~reg0.CLK
+BCLK => data_out[6]~reg0.CLK
+BCLK => data_out[7]~reg0.CLK
+BCLK => data_out[8]~reg0.CLK
+BCLK => data_out[9]~reg0.CLK
+BCLK => data_out[10]~reg0.CLK
+BCLK => data_out[11]~reg0.CLK
+BCLK => data_out[12]~reg0.CLK
+BCLK => data_out[13]~reg0.CLK
+BCLK => data_out[14]~reg0.CLK
+BCLK => data_out[15]~reg0.CLK
+BCLK => data_out[16]~reg0.CLK
+BCLK => data_out[17]~reg0.CLK
+BCLK => data_out[18]~reg0.CLK
+BCLK => data_out[19]~reg0.CLK
+BCLK => data_out[20]~reg0.CLK
+BCLK => data_out[21]~reg0.CLK
+BCLK => data_out[22]~reg0.CLK
+BCLK => data_out[23]~reg0.CLK
+BCLK => ready~reg0.CLK
+BCLK => reg[0].CLK
+BCLK => reg[1].CLK
+BCLK => reg[2].CLK
+BCLK => reg[3].CLK
+BCLK => reg[4].CLK
+BCLK => reg[5].CLK
+BCLK => reg[6].CLK
+BCLK => reg[7].CLK
+BCLK => reg[8].CLK
+BCLK => reg[9].CLK
+BCLK => reg[10].CLK
+BCLK => reg[11].CLK
+BCLK => reg[12].CLK
+BCLK => reg[13].CLK
+BCLK => reg[14].CLK
+BCLK => reg[15].CLK
+BCLK => reg[16].CLK
+BCLK => reg[17].CLK
+BCLK => reg[18].CLK
+BCLK => reg[19].CLK
+BCLK => reg[20].CLK
+BCLK => reg[21].CLK
+BCLK => reg[22].CLK
+BCLK => reg[23].CLK
+BCLK => current_lr.CLK
+ADCLRC => process_0.IN1
+ADCLRC => current_lr.ADATA
+ADCLRC => current_lr.DATAIN
+ADCDAT => reg[0].DATAIN
+rst => process_0.IN0
+start => process_0.IN1
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[10] <= data_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[11] <= data_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[12] <= data_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[13] <= data_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[14] <= data_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[15] <= data_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[16] <= data_out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[17] <= data_out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[18] <= data_out[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[19] <= data_out[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[20] <= data_out[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[21] <= data_out[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[22] <= data_out[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[23] <= data_out[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ready <= ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
+readylr <= readylr~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2|audio_analyse:u3
+data_in[0] => data_com[0].DATAIN
+data_in[1] => data_com[1].DATAIN
+data_in[2] => data_com[2].DATAIN
+data_in[3] => data_com[3].DATAIN
+data_in[4] => data_com[4].DATAIN
+data_in[5] => data_com[5].DATAIN
+data_in[6] => data_com[6].DATAIN
+data_in[7] => data_com[7].DATAIN
+data_in[8] => data_com[8].DATAIN
+data_in[9] => data_com[9].DATAIN
+data_in[10] => data_com[10].DATAIN
+data_in[11] => data_com[11].DATAIN
+data_in[12] => data_com[12].DATAIN
+data_in[13] => data_com[13].DATAIN
+data_in[14] => data_com[14].DATAIN
+data_in[15] => data_com[15].DATAIN
+data_in[16] => data_com[16].DATAIN
+data_in[17] => data_com[17].DATAIN
+data_in[18] => data_com[18].DATAIN
+data_in[19] => data_com[19].DATAIN
+data_in[20] => data_com[20].DATAIN
+data_in[21] => data_com[21].DATAIN
+data_in[22] => data_com[22].DATAIN
+data_in[23] => data_com[23].DATAIN
+ready => max_data_out[0].CLK
+ready => max_data_out[1].CLK
+ready => max_data_out[2].CLK
+ready => max_data_out[3].CLK
+ready => max_data_out[4].CLK
+ready => max_data_out[5].CLK
+ready => max_data_out[6].CLK
+ready => max_data_out[7].CLK
+ready => max_data_out[8].CLK
+ready => max_data_out[9].CLK
+ready => max_data_out[10].CLK
+ready => max_data_out[11].CLK
+ready => max_data_out[12].CLK
+ready => max_data_out[13].CLK
+ready => max_data_out[14].CLK
+ready => max_data_out[15].CLK
+ready => max_data_out[16].CLK
+ready => max_data_out[17].CLK
+ready => max_data_out[18].CLK
+ready => max_data_out[19].CLK
+ready => max_data_out[20].CLK
+ready => max_data_out[21].CLK
+ready => max_data_out[22].CLK
+ready => counter_get_max[0].CLK
+ready => counter_get_max[1].CLK
+ready => counter_get_max[2].CLK
+ready => counter_get_max[3].CLK
+ready => counter_get_max[4].CLK
+ready => counter_get_max[5].CLK
+ready => counter_get_max[6].CLK
+ready => counter_get_max[7].CLK
+ready => counter_get_max[8].CLK
+ready => counter_get_max[9].CLK
+ready => counter_get_max[10].CLK
+ready => counter_get_max[11].CLK
+ready => counter_get_max[12].CLK
+ready => max_data[0].CLK
+ready => max_data[1].CLK
+ready => max_data[2].CLK
+ready => max_data[3].CLK
+ready => max_data[4].CLK
+ready => max_data[5].CLK
+ready => max_data[6].CLK
+ready => max_data[7].CLK
+ready => max_data[8].CLK
+ready => max_data[9].CLK
+ready => max_data[10].CLK
+ready => max_data[11].CLK
+ready => max_data[12].CLK
+ready => max_data[13].CLK
+ready => max_data[14].CLK
+ready => max_data[15].CLK
+ready => max_data[16].CLK
+ready => max_data[17].CLK
+ready => max_data[18].CLK
+ready => max_data[19].CLK
+ready => max_data[20].CLK
+ready => max_data[21].CLK
+ready => max_data[22].CLK
+ready => data_com[0].CLK
+ready => data_com[1].CLK
+ready => data_com[2].CLK
+ready => data_com[3].CLK
+ready => data_com[4].CLK
+ready => data_com[5].CLK
+ready => data_com[6].CLK
+ready => data_com[7].CLK
+ready => data_com[8].CLK
+ready => data_com[9].CLK
+ready => data_com[10].CLK
+ready => data_com[11].CLK
+ready => data_com[12].CLK
+ready => data_com[13].CLK
+ready => data_com[14].CLK
+ready => data_com[15].CLK
+ready => data_com[16].CLK
+ready => data_com[17].CLK
+ready => data_com[18].CLK
+ready => data_com[19].CLK
+ready => data_com[20].CLK
+ready => data_com[21].CLK
+ready => data_com[22].CLK
+ready => data_com[23].CLK
+readylr => max_data_out[0].ENA
+readylr => max_data_out[1].ENA
+readylr => max_data_out[2].ENA
+readylr => max_data_out[3].ENA
+readylr => max_data_out[4].ENA
+readylr => max_data_out[5].ENA
+readylr => max_data_out[6].ENA
+readylr => max_data_out[7].ENA
+readylr => max_data_out[8].ENA
+readylr => max_data_out[9].ENA
+readylr => max_data_out[10].ENA
+readylr => max_data_out[11].ENA
+readylr => max_data_out[12].ENA
+readylr => max_data_out[13].ENA
+readylr => max_data_out[14].ENA
+readylr => max_data_out[15].ENA
+readylr => max_data_out[16].ENA
+readylr => max_data_out[17].ENA
+readylr => max_data_out[18].ENA
+readylr => max_data_out[19].ENA
+readylr => max_data_out[20].ENA
+readylr => max_data_out[21].ENA
+readylr => max_data_out[22].ENA
+readylr => counter_get_max[0].ENA
+readylr => counter_get_max[1].ENA
+readylr => counter_get_max[2].ENA
+readylr => counter_get_max[3].ENA
+readylr => counter_get_max[4].ENA
+readylr => counter_get_max[5].ENA
+readylr => counter_get_max[6].ENA
+readylr => counter_get_max[7].ENA
+readylr => counter_get_max[8].ENA
+readylr => counter_get_max[9].ENA
+readylr => counter_get_max[10].ENA
+readylr => counter_get_max[11].ENA
+readylr => counter_get_max[12].ENA
+readylr => max_data[0].ENA
+readylr => max_data[1].ENA
+readylr => max_data[2].ENA
+readylr => max_data[3].ENA
+readylr => max_data[4].ENA
+readylr => max_data[5].ENA
+readylr => max_data[6].ENA
+readylr => max_data[7].ENA
+readylr => max_data[8].ENA
+readylr => max_data[9].ENA
+readylr => max_data[10].ENA
+readylr => max_data[11].ENA
+readylr => max_data[12].ENA
+readylr => max_data[13].ENA
+readylr => max_data[14].ENA
+readylr => max_data[15].ENA
+readylr => max_data[16].ENA
+readylr => max_data[17].ENA
+readylr => max_data[18].ENA
+readylr => max_data[19].ENA
+readylr => max_data[20].ENA
+readylr => max_data[21].ENA
+readylr => max_data[22].ENA
+readylr => data_com[0].ENA
+readylr => data_com[1].ENA
+readylr => data_com[2].ENA
+readylr => data_com[3].ENA
+readylr => data_com[4].ENA
+readylr => data_com[5].ENA
+readylr => data_com[6].ENA
+readylr => data_com[7].ENA
+readylr => data_com[8].ENA
+readylr => data_com[9].ENA
+readylr => data_com[10].ENA
+readylr => data_com[11].ENA
+readylr => data_com[12].ENA
+readylr => data_com[13].ENA
+readylr => data_com[14].ENA
+readylr => data_com[15].ENA
+readylr => data_com[16].ENA
+readylr => data_com[17].ENA
+readylr => data_com[18].ENA
+readylr => data_com[19].ENA
+readylr => data_com[20].ENA
+readylr => data_com[21].ENA
+readylr => data_com[22].ENA
+readylr => data_com[23].ENA
+grade_out[0] <= grade.DB_MAX_OUTPUT_PORT_TYPE
+grade_out[1] <= grade.DB_MAX_OUTPUT_PORT_TYPE
+grade_out[2] <= grade.DB_MAX_OUTPUT_PORT_TYPE
+grade_out[3] <= grade.DB_MAX_OUTPUT_PORT_TYPE
+up <= up$latch.DB_MAX_OUTPUT_PORT_TYPE
+shoot <= shoot$latch.DB_MAX_OUTPUT_PORT_TYPE
+clk_operate => ~NO_FANOUT~
+
+
+|Logic|wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1
+complement_code[0] => Add0.IN48
+complement_code[0] => true_code.DATAB
+complement_code[1] => Add0.IN47
+complement_code[1] => true_code.DATAB
+complement_code[2] => Add0.IN46
+complement_code[2] => true_code.DATAB
+complement_code[3] => Add0.IN45
+complement_code[3] => true_code.DATAB
+complement_code[4] => Add0.IN44
+complement_code[4] => true_code.DATAB
+complement_code[5] => Add0.IN43
+complement_code[5] => true_code.DATAB
+complement_code[6] => Add0.IN42
+complement_code[6] => true_code.DATAB
+complement_code[7] => Add0.IN41
+complement_code[7] => true_code.DATAB
+complement_code[8] => Add0.IN40
+complement_code[8] => true_code.DATAB
+complement_code[9] => Add0.IN39
+complement_code[9] => true_code.DATAB
+complement_code[10] => Add0.IN38
+complement_code[10] => true_code.DATAB
+complement_code[11] => Add0.IN37
+complement_code[11] => true_code.DATAB
+complement_code[12] => Add0.IN36
+complement_code[12] => true_code.DATAB
+complement_code[13] => Add0.IN35
+complement_code[13] => true_code.DATAB
+complement_code[14] => Add0.IN34
+complement_code[14] => true_code.DATAB
+complement_code[15] => Add0.IN33
+complement_code[15] => true_code.DATAB
+complement_code[16] => Add0.IN32
+complement_code[16] => true_code.DATAB
+complement_code[17] => Add0.IN31
+complement_code[17] => true_code.DATAB
+complement_code[18] => Add0.IN30
+complement_code[18] => true_code.DATAB
+complement_code[19] => Add0.IN29
+complement_code[19] => true_code.DATAB
+complement_code[20] => Add0.IN28
+complement_code[20] => true_code.DATAB
+complement_code[21] => Add0.IN27
+complement_code[21] => true_code.DATAB
+complement_code[22] => Add0.IN26
+complement_code[22] => true_code.DATAB
+complement_code[23] => Add0.IN25
+complement_code[23] => temp[0].LATCH_ENABLE
+complement_code[23] => temp[1].LATCH_ENABLE
+complement_code[23] => temp[2].LATCH_ENABLE
+complement_code[23] => temp[3].LATCH_ENABLE
+complement_code[23] => temp[4].LATCH_ENABLE
+complement_code[23] => temp[5].LATCH_ENABLE
+complement_code[23] => temp[6].LATCH_ENABLE
+complement_code[23] => temp[7].LATCH_ENABLE
+complement_code[23] => temp[8].LATCH_ENABLE
+complement_code[23] => temp[9].LATCH_ENABLE
+complement_code[23] => temp[10].LATCH_ENABLE
+complement_code[23] => temp[11].LATCH_ENABLE
+complement_code[23] => temp[12].LATCH_ENABLE
+complement_code[23] => temp[13].LATCH_ENABLE
+complement_code[23] => temp[14].LATCH_ENABLE
+complement_code[23] => temp[15].LATCH_ENABLE
+complement_code[23] => temp[16].LATCH_ENABLE
+complement_code[23] => temp[17].LATCH_ENABLE
+complement_code[23] => temp[18].LATCH_ENABLE
+complement_code[23] => temp[19].LATCH_ENABLE
+complement_code[23] => temp[20].LATCH_ENABLE
+complement_code[23] => temp[21].LATCH_ENABLE
+complement_code[23] => temp[22].LATCH_ENABLE
+complement_code[23] => temp[23].LATCH_ENABLE
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+complement_code[23] => true_code.OUTPUTSELECT
+true_code[0] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[1] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[2] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[3] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[4] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[5] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[6] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[7] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[8] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[9] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[10] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[11] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[12] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[13] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[14] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[15] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[16] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[17] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[18] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[19] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[20] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[21] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[22] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+true_code[23] <= true_code.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Logic|wm8731_controller:u2|decoder:d4
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

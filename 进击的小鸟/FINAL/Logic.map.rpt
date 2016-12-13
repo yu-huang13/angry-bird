@@ -1,0 +1,1126 @@
+Analysis & Synthesis report for Logic
+Tue Jun 16 09:23:32 2015
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Logic|state
+  9. State Machine - |Logic|wm8731_controller:u2|cur_state
+ 10. User-Specified and Inferred Latches
+ 11. Logic Cells Representing Combinational Loops
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: wm8731_controller:u2
+ 18. Parameter Settings for User Entity Instance: wm8731_controller:u2|i2s_to_parallel:u2
+ 19. Parameter Settings for User Entity Instance: wm8731_controller:u2|audio_analyse:u3
+ 20. Parameter Settings for User Entity Instance: wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1
+ 21. Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult1
+ 23. Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult2
+ 24. Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult3
+ 25. lpm_mult Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1"
+ 27. Port Connectivity Checks: "vga_rom:u1|vga640480:u1"
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jun 16 09:23:32 2015      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; Logic                                      ;
+; Top-level Entity Name              ; Logic                                      ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; 10,050                                     ;
+;     Total combinational functions  ; 9,819                                      ;
+;     Dedicated logic registers      ; 872                                        ;
+; Total registers                    ; 872                                        ;
+; Total pins                         ; 89                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20Q240C8       ;                    ;
+; Top-level entity name                                                      ; Logic              ; Logic              ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; audio_analyse.vhd                ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/audio_analyse.vhd               ;         ;
+; complement_to_true.vhd           ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/complement_to_true.vhd          ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/decoder.vhd                     ;         ;
+; frequency100M_to_20K.vhd         ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/frequency100M_to_20K.vhd        ;         ;
+; frequency24M_to_12M.vhd          ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/frequency24M_to_12M.vhd         ;         ;
+; i2c_controller.vhd               ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/i2c_controller.vhd              ;         ;
+; i2s_to_parallel.vhd              ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/i2s_to_parallel.vhd             ;         ;
+; wm8731_controller.vhd            ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/wm8731_controller.vhd           ;         ;
+; clockDivision.vhd                ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/clockDivision.vhd               ;         ;
+; singleClkDiv.vhd                 ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/singleClkDiv.vhd                ;         ;
+; VGA_640480.vhd                   ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/VGA_640480.vhd                  ;         ;
+; vga_rom.vhd                      ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/vga_rom.vhd                     ;         ;
+; Logic.vhd                        ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/Logic.vhd                       ;         ;
+; Pulse.vhd                        ; yes             ; User VHDL File               ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/Pulse.vhd                       ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_6ch.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/db/add_sub_6ch.tdf              ;         ;
+; db/add_sub_ach.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/admin/Desktop/FINAL/FINAL_3.0/db/add_sub_ach.tdf              ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; e:/altera/13.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++---------------------------------------------+-------------------------------------------+
+; Resource                                    ; Usage                                     ;
++---------------------------------------------+-------------------------------------------+
+; Estimated Total logic elements              ; 10,050                                    ;
+;                                             ;                                           ;
+; Total combinational functions               ; 9819                                      ;
+; Logic element usage by number of LUT inputs ;                                           ;
+;     -- 4 input functions                    ; 1781                                      ;
+;     -- 3 input functions                    ; 4034                                      ;
+;     -- <=2 input functions                  ; 4004                                      ;
+;                                             ;                                           ;
+; Logic elements by mode                      ;                                           ;
+;     -- normal mode                          ; 3558                                      ;
+;     -- arithmetic mode                      ; 6261                                      ;
+;                                             ;                                           ;
+; Total registers                             ; 872                                       ;
+;     -- Dedicated logic registers            ; 872                                       ;
+;     -- I/O registers                        ; 0                                         ;
+;                                             ;                                           ;
+; I/O pins                                    ; 89                                        ;
+; Embedded Multiplier 9-bit elements          ; 0                                         ;
+; Maximum fan-out node                        ; clockDivision:u0|singleClkDiv:u22|out_clk ;
+; Maximum fan-out                             ; 573                                       ;
+; Total fan-out                               ; 29815                                     ;
+; Average fan-out                             ; 2.77                                      ;
++---------------------------------------------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Logic                                            ; 9819 (8975)       ; 872 (588)    ; 0           ; 0            ; 0       ; 0         ; 89   ; 0            ; |Logic                                                                                                                                   ;              ;
+;    |clockDivision:u0|                             ; 31 (0)            ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0                                                                                                                  ;              ;
+;       |Pulse:t0|                                  ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|Pulse:t0                                                                                                         ;              ;
+;       |Pulse:t1|                                  ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|Pulse:t1                                                                                                         ;              ;
+;       |Pulse:t3|                                  ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|Pulse:t3                                                                                                         ;              ;
+;       |singleClkDiv:min0|                         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:min0                                                                                                ;              ;
+;       |singleClkDiv:u10|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u10                                                                                                 ;              ;
+;       |singleClkDiv:u11|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u11                                                                                                 ;              ;
+;       |singleClkDiv:u12|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u12                                                                                                 ;              ;
+;       |singleClkDiv:u13|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u13                                                                                                 ;              ;
+;       |singleClkDiv:u14|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u14                                                                                                 ;              ;
+;       |singleClkDiv:u15|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u15                                                                                                 ;              ;
+;       |singleClkDiv:u16|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u16                                                                                                 ;              ;
+;       |singleClkDiv:u17|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u17                                                                                                 ;              ;
+;       |singleClkDiv:u18|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u18                                                                                                 ;              ;
+;       |singleClkDiv:u19|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u19                                                                                                 ;              ;
+;       |singleClkDiv:u1|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u1                                                                                                  ;              ;
+;       |singleClkDiv:u20|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u20                                                                                                 ;              ;
+;       |singleClkDiv:u21|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u21                                                                                                 ;              ;
+;       |singleClkDiv:u22|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u22                                                                                                 ;              ;
+;       |singleClkDiv:u23|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u23                                                                                                 ;              ;
+;       |singleClkDiv:u24|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u24                                                                                                 ;              ;
+;       |singleClkDiv:u25|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u25                                                                                                 ;              ;
+;       |singleClkDiv:u26|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u26                                                                                                 ;              ;
+;       |singleClkDiv:u27|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u27                                                                                                 ;              ;
+;       |singleClkDiv:u2|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u2                                                                                                  ;              ;
+;       |singleClkDiv:u3|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u3                                                                                                  ;              ;
+;       |singleClkDiv:u4|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u4                                                                                                  ;              ;
+;       |singleClkDiv:u5|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u5                                                                                                  ;              ;
+;       |singleClkDiv:u6|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u6                                                                                                  ;              ;
+;       |singleClkDiv:u7|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u7                                                                                                  ;              ;
+;       |singleClkDiv:u8|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u8                                                                                                  ;              ;
+;       |singleClkDiv:u9|                           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|clockDivision:u0|singleClkDiv:u9                                                                                                  ;              ;
+;    |vga_rom:u1|                                   ; 568 (318)         ; 101 (47)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1                                                                                                                        ;              ;
+;       |lpm_mult:Mult0|                            ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 46 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_6ch:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_6ch:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_ach:auto_generated| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ach:auto_generated ;              ;
+;       |lpm_mult:Mult1|                            ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 43 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_6ch:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_6ch:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_ach:auto_generated| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ach:auto_generated ;              ;
+;       |lpm_mult:Mult2|                            ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 46 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_6ch:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_6ch:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_ach:auto_generated| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ach:auto_generated ;              ;
+;       |lpm_mult:Mult3|                            ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 45 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_6ch:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_6ch:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_ach:auto_generated| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ach:auto_generated ;              ;
+;       |vga640480:u1|                              ; 70 (70)           ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|vga_rom:u1|vga640480:u1                                                                                                           ;              ;
+;    |wm8731_controller:u2|                         ; 245 (3)           ; 149 (3)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2                                                                                                              ;              ;
+;       |audio_analyse:u3|                          ; 120 (51)          ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|audio_analyse:u3                                                                                             ;              ;
+;          |complement_to_true:c1|                  ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1                                                                       ;              ;
+;       |decoder:d4|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|decoder:d4                                                                                                   ;              ;
+;       |frequency100M_to_20K:c1|                   ; 18 (18)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|frequency100M_to_20K:c1                                                                                      ;              ;
+;       |frequency24M_to_12M:c2|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|frequency24M_to_12M:c2                                                                                       ;              ;
+;       |i2c_controller:u1|                         ; 66 (66)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|i2c_controller:u1                                                                                            ;              ;
+;       |i2s_to_parallel:u2|                        ; 30 (30)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Logic|wm8731_controller:u2|i2s_to_parallel:u2                                                                                           ;              ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |Logic|state                                    ;
++----------+----------+----------+----------+----------+----------+
+; Name     ; state.s3 ; state.s2 ; state.s1 ; state.s0 ; state.s4 ;
++----------+----------+----------+----------+----------+----------+
+; state.s4 ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.s0 ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.s1 ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.s2 ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.s3 ; 1        ; 0        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+----------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------+
+; State Machine - |Logic|wm8731_controller:u2|cur_state                                 ;
++--------------------------+--------------------------+---------------+-----------------+
+; Name                     ; cur_state.transmit_audio ; cur_state.set ; cur_state.start ;
++--------------------------+--------------------------+---------------+-----------------+
+; cur_state.start          ; 0                        ; 0             ; 0               ;
+; cur_state.set            ; 0                        ; 1             ; 1               ;
+; cur_state.transmit_audio ; 1                        ; 0             ; 1               ;
++--------------------------+--------------------------+---------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                ;
++----------------------------------------------------------------------+----------------------------------------------------+------------------------+
+; Latch Name                                                           ; Latch Enable Signal                                ; Free of Timing Hazards ;
++----------------------------------------------------------------------+----------------------------------------------------+------------------------+
+; wm8731_controller:u2|start_set                                       ; wm8731_controller:u2|cur_state.transmit_audio      ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|shoot                          ; wm8731_controller:u2|audio_analyse:u3|LessThan19   ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|up                             ; wm8731_controller:u2|audio_analyse:u3|LessThan19   ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[19] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[18] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[17] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[16] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[15] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[14] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[13] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[12] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[11] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[10] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[9]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[8]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[7]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[6]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[5]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[4]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[3]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[2]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[1]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[0]  ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[22] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[21] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1|temp[20] ; wm8731_controller:u2|audio_analyse:u3|data_com[23] ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|shoot_temp                     ; GND                                                ; yes                    ;
+; wm8731_controller:u2|audio_analyse:u3|up_temp                        ; wm8731_controller:u2|audio_analyse:u3|up_temp      ; yes                    ;
+; Number of user-specified and inferred latches = 28                   ;                                                    ;                        ;
++----------------------------------------------------------------------+----------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; wm8731_controller:u2|audio_analyse:u3|LessThan19~0     ;   ;
+; wm8731_controller:u2|audio_analyse:u3|LessThan19~1     ;   ;
+; Number of logic cells representing combinational loops ; 2 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                            ;
++------------------------------------------------------------------+------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                         ;
++------------------------------------------------------------------+------------------------------------------------------------+
+; vga_rom:u1|FPGAE_RamAdd[19,20]                                   ; Stuck at GND due to stuck port data_in                     ;
+; clouds_horizontal[0,1,10,11,20,21,30,31,40,41,50,51,60,61,70,71] ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[0]                                            ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[1]                                            ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[10]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[11]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[20]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[21]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[30]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[31]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[40]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[41]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[50]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[51]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[60]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[61]                                           ; Stuck at GND due to stuck port data_in                     ;
+; bullets_horizontal[70]                                           ; Stuck at VCC due to stuck port data_in                     ;
+; bullets_horizontal[71]                                           ; Stuck at GND due to stuck port data_in                     ;
+; basenum[7,8]                                                     ; Stuck at GND due to stuck port data_in                     ;
+; bomb_horizontal[2]                                               ; Merged with bomb_horizontal[0]                             ;
+; bomb_horizontal[3..9]                                            ; Merged with bomb_horizontal[1]                             ;
+; boss_bullets_horizontal[1,2]                                     ; Merged with boss_bullets_horizontal[0]                     ;
+; boss_bullets_horizontal[11,12]                                   ; Merged with boss_bullets_horizontal[10]                    ;
+; boss_bullets_horizontal[21,22]                                   ; Merged with boss_bullets_horizontal[20]                    ;
+; boss_bullets_horizontal[31,32]                                   ; Merged with boss_bullets_horizontal[30]                    ;
+; boss_bullets_horizontal[41]                                      ; Merged with boss_bullets_horizontal[40]                    ;
+; boss_bullets_horizontal[51]                                      ; Merged with boss_bullets_horizontal[50]                    ;
+; boss_bullets_horizontal[61,62]                                   ; Merged with boss_bullets_horizontal[60]                    ;
+; boss_bullets_horizontal[71,72]                                   ; Merged with boss_bullets_horizontal[70]                    ;
+; boss_bullets_horizontal[42]                                      ; Merged with boss_bullets_horizontal[40]                    ;
+; boss_bullets_horizontal[52]                                      ; Merged with boss_bullets_horizontal[50]                    ;
+; wm8731_controller:u2|i2c_controller:u1|step[7]                   ; Merged with wm8731_controller:u2|i2c_controller:u1|step[6] ;
+; wm8731_controller:u2|i2c_controller:u1|step[6]                   ; Stuck at GND due to stuck port data_in                     ;
+; wm8731_controller:u2|audio_analyse:u3|max_data_out[0..18]        ; Lost fanout                                                ;
+; bomb_horizontal[1]                                               ; Stuck at GND due to stuck port data_in                     ;
+; bomb_horizontal[0]                                               ; Stuck at VCC due to stuck port data_in                     ;
+; boss_bullets_horizontal[0,10,20,30,40,50,60,70]                  ; Stuck at GND due to stuck port data_in                     ;
+; Total Number of Removed Registers = 91                           ;                                                            ;
++------------------------------------------------------------------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++-----------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-----------------------+---------------------------+---------------------------------------------------------------------------------------+
+; clouds_horizontal[60] ; Stuck at GND              ; boss_bullets_horizontal[70], boss_bullets_horizontal[50],                             ;
+;                       ; due to stuck port data_in ; boss_bullets_horizontal[20], boss_bullets_horizontal[0], boss_bullets_horizontal[10], ;
+;                       ;                           ; boss_bullets_horizontal[30], boss_bullets_horizontal[40],                             ;
+;                       ;                           ; boss_bullets_horizontal[60]                                                           ;
+; clouds_horizontal[70] ; Stuck at GND              ; bullets_horizontal[0], bullets_horizontal[1]                                          ;
+;                       ; due to stuck port data_in ;                                                                                       ;
++-----------------------+---------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 872   ;
+; Number of registers using Synchronous Clear  ; 55    ;
+; Number of registers using Synchronous Load   ; 196   ;
+; Number of registers using Asynchronous Clear ; 68    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 646   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Inverted Register Statistics                                        ;
++-----------------------------------------------------------+---------+
+; Inverted Register                                         ; Fan out ;
++-----------------------------------------------------------+---------+
+; wm8731_controller:u2|frequency24M_to_12M:c2|clk12MHz_temp ; 2       ;
+; vga_rom:u1|vga640480:u1|hs1                               ; 10      ;
+; vga_rom:u1|vga640480:u1|vs1                               ; 10      ;
+; boss_pos[7]                                               ; 9       ;
+; boss_pos[6]                                               ; 9       ;
+; boss_pos[3]                                               ; 9       ;
+; vga_rom:u1|vga640480:u1|x[0]                              ; 23      ;
+; vga_rom:u1|vga640480:u1|y[0]                              ; 39      ;
+; Total number of inverted registers = 8                    ;         ;
++-----------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[7]                              ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|plane_pos[0]                                    ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[10]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[23]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[32]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[44]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[47]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[57]                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Logic|clouds_vertical[64]                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Logic|wm8731_controller:u2|i2c_controller:u1|index[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Logic|wm8731_controller:u2|i2c_controller:u1|step[2]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Logic|killed_clouds_sum[26]                           ;
+; 8:1                ; 18 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; Yes        ; |Logic|vga_rom:u1|address_tmp[7]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[9]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[14]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[29]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[36]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[44]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[56]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[66]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|clouds_horizontal[73]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[19]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[23]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[32]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[49]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[59]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[67]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[79]                          ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Logic|boss_pos[0]                                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Logic|bullets_horizontal[6]                           ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[15]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[29]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[38]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[44]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[57]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[69]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[73]                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |Logic|boss_bullets_horizontal[7]                      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Logic|bomb_horizontal[0]                              ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |Logic|bomb_vertical[2]                                ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |Logic|bomb_time[13]                                   ;
+; 21:1               ; 32 bits   ; 448 LEs       ; 32 LEs               ; 416 LEs                ; Yes        ; |Logic|dead_time[17]                                   ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 28 LEs               ; 16 LEs                 ; Yes        ; |Logic|pix_x[0]                                        ;
+; 33:1               ; 8 bits    ; 176 LEs       ; 160 LEs              ; 16 LEs                 ; Yes        ; |Logic|pix_x[2]                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Logic|boss_pos[7]                                     ;
+; 33:1               ; 9 bits    ; 198 LEs       ; 180 LEs              ; 18 LEs                 ; Yes        ; |Logic|pix_y[3]                                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Logic|boss_bullets_exist                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Logic|plane_up_speed                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Logic|killed_clouds_sum                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Logic|dpix_type                                       ;
+; 25:1               ; 5 bits    ; 80 LEs        ; 15 LEs               ; 65 LEs                 ; No         ; |Logic|state                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8731_controller:u2 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; width          ; 24    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8731_controller:u2|i2s_to_parallel:u2 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8731_controller:u2|audio_analyse:u3 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1 ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult0        ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11         ; Untyped             ;
+; LPM_WIDTHB                                     ; 11         ; Untyped             ;
+; LPM_WIDTHP                                     ; 22         ; Untyped             ;
+; LPM_WIDTHR                                     ; 22         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult1        ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10         ; Untyped             ;
+; LPM_WIDTHB                                     ; 11         ; Untyped             ;
+; LPM_WIDTHP                                     ; 21         ; Untyped             ;
+; LPM_WIDTHR                                     ; 21         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult2        ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11         ; Untyped             ;
+; LPM_WIDTHB                                     ; 11         ; Untyped             ;
+; LPM_WIDTHP                                     ; 22         ; Untyped             ;
+; LPM_WIDTHR                                     ; 22         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga_rom:u1|lpm_mult:Mult3        ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11         ; Untyped             ;
+; LPM_WIDTHB                                     ; 11         ; Untyped             ;
+; LPM_WIDTHP                                     ; 22         ; Untyped             ;
+; LPM_WIDTHR                                     ; 22         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                    ;
++---------------------------------------+---------------------------+
+; Name                                  ; Value                     ;
++---------------------------------------+---------------------------+
+; Number of entity instances            ; 4                         ;
+; Entity Instance                       ; vga_rom:u1|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 11                        ;
+;     -- LPM_WIDTHB                     ; 11                        ;
+;     -- LPM_WIDTHP                     ; 22                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                       ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
+; Entity Instance                       ; vga_rom:u1|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 10                        ;
+;     -- LPM_WIDTHB                     ; 11                        ;
+;     -- LPM_WIDTHP                     ; 21                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                       ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
+; Entity Instance                       ; vga_rom:u1|lpm_mult:Mult2 ;
+;     -- LPM_WIDTHA                     ; 11                        ;
+;     -- LPM_WIDTHB                     ; 11                        ;
+;     -- LPM_WIDTHP                     ; 22                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                       ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
+; Entity Instance                       ; vga_rom:u1|lpm_mult:Mult3 ;
+;     -- LPM_WIDTHA                     ; 11                        ;
+;     -- LPM_WIDTHB                     ; 11                        ;
+;     -- LPM_WIDTHP                     ; 22                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                        ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                       ;
+;     -- USE_EAB                        ; OFF                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                        ;
++---------------------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1"                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; true_code[23] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_rom:u1|vga640480:u1"                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; x[31..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y[31..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:37     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Tue Jun 16 09:22:47 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Logic -c Logic
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file audio_analyse.vhd
+    Info (12022): Found design unit 1: audio_analyse-aa
+    Info (12023): Found entity 1: audio_analyse
+Info (12021): Found 2 design units, including 1 entities, in source file complement_to_true.vhd
+    Info (12022): Found design unit 1: complement_to_true-ctt
+    Info (12023): Found entity 1: complement_to_true
+Info (12021): Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: decoder-de
+    Info (12023): Found entity 1: decoder
+Info (12021): Found 2 design units, including 1 entities, in source file frequency100m_to_20k.vhd
+    Info (12022): Found design unit 1: frequency100M_to_20K-fre
+    Info (12023): Found entity 1: frequency100M_to_20K
+Info (12021): Found 2 design units, including 1 entities, in source file frequency24m_to_12m.vhd
+    Info (12022): Found design unit 1: frequency24M_to_12M-ft
+    Info (12023): Found entity 1: frequency24M_to_12M
+Info (12021): Found 2 design units, including 1 entities, in source file i2c_controller.vhd
+    Info (12022): Found design unit 1: i2c_controller-ic
+    Info (12023): Found entity 1: i2c_controller
+Info (12021): Found 2 design units, including 1 entities, in source file i2s_to_parallel.vhd
+    Info (12022): Found design unit 1: i2s_to_parallel-itp
+    Info (12023): Found entity 1: i2s_to_parallel
+Info (12021): Found 2 design units, including 1 entities, in source file wm8731_controller.vhd
+    Info (12022): Found design unit 1: wm8731_controller-wc
+    Info (12023): Found entity 1: wm8731_controller
+Info (12021): Found 2 design units, including 1 entities, in source file clockdivision.vhd
+    Info (12022): Found design unit 1: clockDivision-struc
+    Info (12023): Found entity 1: clockDivision
+Info (12021): Found 2 design units, including 1 entities, in source file singleclkdiv.vhd
+    Info (12022): Found design unit 1: singleClkDiv-struc
+    Info (12023): Found entity 1: singleClkDiv
+Info (12021): Found 2 design units, including 1 entities, in source file digital_rom.vhd
+    Info (12022): Found design unit 1: digital_rom-SYN
+    Info (12023): Found entity 1: digital_rom
+Info (12021): Found 2 design units, including 1 entities, in source file vga_640480.vhd
+    Info (12022): Found design unit 1: vga640480-behavior
+    Info (12023): Found entity 1: vga640480
+Info (12021): Found 2 design units, including 1 entities, in source file vga_rom.vhd
+    Info (12022): Found design unit 1: vga_rom-vga_rom
+    Info (12023): Found entity 1: vga_rom
+Info (12021): Found 2 design units, including 1 entities, in source file logic.vhd
+    Info (12022): Found design unit 1: Logic-struc
+    Info (12023): Found entity 1: Logic
+Info (12021): Found 2 design units, including 1 entities, in source file pulse.vhd
+    Info (12022): Found design unit 1: Pulse-struc
+    Info (12023): Found entity 1: Pulse
+Info (12127): Elaborating entity "Logic" for the top level hierarchy
+Info (12128): Elaborating entity "clockDivision" for hierarchy "clockDivision:u0"
+Info (12128): Elaborating entity "Pulse" for hierarchy "clockDivision:u0|Pulse:t0"
+Info (12128): Elaborating entity "singleClkDiv" for hierarchy "clockDivision:u0|singleClkDiv:u1"
+Info (12128): Elaborating entity "vga_rom" for hierarchy "vga_rom:u1"
+Info (12128): Elaborating entity "vga640480" for hierarchy "vga_rom:u1|vga640480:u1"
+Info (12128): Elaborating entity "wm8731_controller" for hierarchy "wm8731_controller:u2"
+Warning (10492): VHDL Process Statement warning at wm8731_controller.vhd(129): signal "set_end" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at wm8731_controller.vhd(118): inferring latch(es) for signal or variable "start_set", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "start_set" at wm8731_controller.vhd(118)
+Info (12128): Elaborating entity "frequency100M_to_20K" for hierarchy "wm8731_controller:u2|frequency100M_to_20K:c1"
+Info (12128): Elaborating entity "frequency24M_to_12M" for hierarchy "wm8731_controller:u2|frequency24M_to_12M:c2"
+Info (12128): Elaborating entity "i2c_controller" for hierarchy "wm8731_controller:u2|i2c_controller:u1"
+Warning (10492): VHDL Process Statement warning at i2c_controller.vhd(33): signal "tr_run" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "i2s_to_parallel" for hierarchy "wm8731_controller:u2|i2s_to_parallel:u2"
+Warning (10492): VHDL Process Statement warning at i2s_to_parallel.vhd(29): signal "start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at i2s_to_parallel.vhd(30): signal "ADCLRC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "audio_analyse" for hierarchy "wm8731_controller:u2|audio_analyse:u3"
+Warning (10492): VHDL Process Statement warning at audio_analyse.vhd(48): signal "readylr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at audio_analyse.vhd(112): signal "up_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at audio_analyse.vhd(113): signal "shoot_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at audio_analyse.vhd(101): inferring latch(es) for signal or variable "shoot_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at audio_analyse.vhd(101): inferring latch(es) for signal or variable "up_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at audio_analyse.vhd(101): inferring latch(es) for signal or variable "up", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at audio_analyse.vhd(101): inferring latch(es) for signal or variable "shoot", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "shoot" at audio_analyse.vhd(101)
+Info (10041): Inferred latch for "up" at audio_analyse.vhd(101)
+Info (10041): Inferred latch for "up_temp" at audio_analyse.vhd(101)
+Info (10041): Inferred latch for "shoot_temp" at audio_analyse.vhd(101)
+Info (12128): Elaborating entity "complement_to_true" for hierarchy "wm8731_controller:u2|audio_analyse:u3|complement_to_true:c1"
+Warning (10492): VHDL Process Statement warning at complement_to_true.vhd(23): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at complement_to_true.vhd(17): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp[0]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[1]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[2]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[3]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[4]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[5]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[6]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[7]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[8]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[9]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[10]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[11]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[12]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[13]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[14]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[15]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[16]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[17]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[18]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[19]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[20]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[21]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[22]" at complement_to_true.vhd(17)
+Info (10041): Inferred latch for "temp[23]" at complement_to_true.vhd(17)
+Info (12128): Elaborating entity "decoder" for hierarchy "wm8731_controller:u2|decoder:d4"
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "vga_rom:u1|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "vga_rom:u1|Mult1"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "vga_rom:u1|Mult2"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "vga_rom:u1|Mult3"
+Info (12130): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "vga_rom:u1|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_6ch.tdf
+    Info (12023): Found entity 1: add_sub_6ch
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ach.tdf
+    Info (12023): Found entity 1: add_sub_ach
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult0"
+Info (12130): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult1"
+Info (12133): Instantiated megafunction "vga_rom:u1|lpm_mult:Mult1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "21"
+    Info (12134): Parameter "LPM_WIDTHR" = "21"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult1"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult1"
+Info (12131): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "vga_rom:u1|lpm_mult:Mult1"
+Info (12130): Elaborated megafunction instantiation "vga_rom:u1|lpm_mult:Mult3"
+Info (12133): Instantiated megafunction "vga_rom:u1|lpm_mult:Mult3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "wm8731_controller:u2|i2s_to_parallel:u2|current_lr" is converted into an equivalent circuit using register "wm8731_controller:u2|i2s_to_parallel:u2|current_lr~_emulated" and latch "wm8731_controller:u2|i2s_to_parallel:u2|current_lr~1"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "FPGAE_RamAdd[19]" is stuck at GND
+    Warning (13410): Pin "FPGAE_RamAdd[20]" is stuck at GND
+    Warning (13410): Pin "FPGAC_RamRW[0]" is stuck at VCC
+    Warning (13410): Pin "FPGAC_RamRW[1]" is stuck at VCC
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 23 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[9]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[10]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[11]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[12]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[13]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[14]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[15]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[16]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[17]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[18]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[19]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[20]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[21]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[22]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[23]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[24]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[25]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[26]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[27]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[28]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[29]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[30]"
+    Warning (15610): No output dependent on input pin "FPGAC_Ram_Data[31]"
+Info (21057): Implemented 10184 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 38 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 10095 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 577 megabytes
+    Info: Processing ended: Tue Jun 16 09:23:32 2015
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:45
+
+

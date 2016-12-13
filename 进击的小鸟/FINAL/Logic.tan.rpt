@@ -1,0 +1,1075 @@
+Classic Timing Analyzer report for Logic
+Thu Jun 11 19:47:45 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. Clock Hold: 'clk'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                         ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------+--------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                       ; To                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------+--------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 6.651 ns                         ; keyboard_clk               ; top:u2|Keyboard:u0|clk1        ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 54.430 ns                        ; state.s0                   ; seg2[5]                        ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 2.369 ns                         ; reset                      ; vga_rom:u1|vga640480:u1|y[3]   ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A                                      ; None          ; 3.84 MHz ( period = 260.402 ns ) ; clouds_vertical[0]         ; killed_clouds_sum[31]          ; clk        ; clk      ; 0            ;
+; Clock Hold: 'clk'            ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; top:u2|Keyboard:u0|code[7] ; top:u2|Keyboard:u0|scancode[7] ; clk        ; clk      ; 377          ;
+; Total number of failed paths ;                                          ;               ;                                  ;                            ;                                ;            ;          ; 377          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------+--------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20Q240C8       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                        ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                  ; To                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 3.84 MHz ( period = 260.402 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 260.141 ns              ;
+; N/A                                     ; 3.85 MHz ( period = 259.578 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 259.297 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 259.312 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 259.031 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 259.187 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.906 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 259.177 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 258.916 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 259.035 ns )                    ; boss_pos[0]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.773 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 258.969 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.708 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 258.781 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.500 ns              ;
+; N/A                                     ; 3.86 MHz ( period = 258.747 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 258.477 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.732 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 258.471 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.711 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.430 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.621 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 258.378 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.512 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 258.251 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.489 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 258.234 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.412 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 258.169 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.353 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 258.072 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.194 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 257.925 ns              ;
+; N/A                                     ; 3.87 MHz ( period = 258.087 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.806 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 258.064 ns )                    ; boss_pos[1]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 257.806 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.996 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 257.732 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.979 ns )                    ; boss_pos[2]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 257.721 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.962 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.681 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.923 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 257.633 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.908 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 257.627 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.894 ns )                    ; boss_pos[3]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 257.636 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.880 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 257.620 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.810 ns )                    ; boss_pos[0]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.548 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.797 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 257.534 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.796 ns )                    ; boss_pos[4]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 257.538 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.744 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.483 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.685 ns )                    ; boss_pos[5]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 257.427 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.665 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 257.390 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.657 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 257.367 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.642 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 257.361 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.588 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 257.325 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.556 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.275 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.532 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 257.242 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.531 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 257.268 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.517 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 257.236 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.486 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.205 ns              ;
+; N/A                                     ; 3.88 MHz ( period = 257.406 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 257.143 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.399 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 257.124 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.380 ns )                    ; boss_pos[0]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 257.109 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.370 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 257.081 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.365 ns )                    ; boss_pos[0]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 257.103 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.322 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 257.059 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.314 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 257.044 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.299 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 257.038 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.287 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 257.026 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.274 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.999 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.254 ns )                    ; boss_pos[0]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 257.010 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.203 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.942 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.197 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.934 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.188 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 256.945 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.172 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.888 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.126 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 256.836 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.122 ns )                    ; boss_pos[0]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.866 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.111 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 256.830 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.105 ns )                    ; boss_pos[6]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.847 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.104 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.815 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.056 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 256.766 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.056 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 256.776 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.056 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.801 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.045 ns )                    ; boss_pos[0]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.801 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.041 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 256.760 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 257.000 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 256.737 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.979 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.736 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.979 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.690 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.930 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 256.667 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.906 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.622 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.868 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.593 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.857 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 256.587 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.842 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 256.581 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.839 ns )                    ; boss_pos[1]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 256.581 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.827 ns )                    ; boss_pos[0]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.557 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.798 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.523 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.791 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.528 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.790 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 256.510 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.781 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.497 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.761 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.492 ns              ;
+; N/A                                     ; 3.89 MHz ( period = 256.754 ns )                    ; boss_pos[2]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 256.496 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.731 ns )                    ; bullets_horizontal[6] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.473 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.731 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 256.488 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.721 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.458 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.669 ns )                    ; boss_pos[3]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 256.411 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.665 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 256.385 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.635 ns )                    ; boss_pos[7]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.377 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.629 ns )                    ; boss_pos[0]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.364 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.599 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 256.344 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.573 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.284 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.571 ns )                    ; boss_pos[4]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 256.313 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.563 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.299 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.548 ns )                    ; bullets_vertical[0]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.286 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.522 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 256.279 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.513 ns )                    ; boss_pos[0]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 256.252 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.503 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.214 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.460 ns )                    ; boss_pos[5]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 256.202 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.447 ns )                    ; clouds_vertical[6]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 256.187 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.409 ns )                    ; boss_pos[1]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 256.142 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.394 ns )                    ; bullets_vertical[5]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.132 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.394 ns )                    ; boss_pos[1]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 256.136 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.375 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.091 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.324 ns )                    ; boss_pos[2]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 256.057 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.309 ns )                    ; boss_pos[8]           ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 256.041 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.309 ns )                    ; boss_pos[2]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 256.051 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.305 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 256.021 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.304 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 256.035 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.283 ns )                    ; boss_pos[1]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 256.043 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.259 ns )                    ; clouds_vertical[4]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.979 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.254 ns )                    ; bullets_horizontal[7] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.996 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.239 ns )                    ; boss_pos[3]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 255.972 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.224 ns )                    ; boss_pos[3]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 255.966 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.198 ns )                    ; boss_pos[2]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.958 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.195 ns )                    ; bullets_horizontal[8] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.937 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.189 ns )                    ; clouds_vertical[5]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.909 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.176 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[21] ; clk        ; clk      ; None                        ; None                      ; 255.924 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.164 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[20] ; clk        ; clk      ; None                        ; None                      ; 255.911 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.151 ns )                    ; boss_pos[1]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.899 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.141 ns )                    ; boss_pos[4]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 255.874 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.126 ns )                    ; boss_pos[4]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 255.868 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.113 ns )                    ; boss_pos[3]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.873 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.112 ns )                    ; bullets_vertical[1]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.850 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.106 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.842 ns              ;
+; N/A                                     ; 3.90 MHz ( period = 256.092 ns )                    ; bullets_vertical[2]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.830 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 256.074 ns )                    ; boss_pos[1]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 255.834 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 256.066 ns )                    ; boss_pos[2]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.814 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 256.030 ns )                    ; boss_pos[5]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 255.763 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 256.015 ns )                    ; boss_pos[4]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.775 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 256.015 ns )                    ; boss_pos[5]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 255.757 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.990 ns )                    ; clouds_vertical[7]    ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.730 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.989 ns )                    ; boss_pos[2]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 255.749 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.981 ns )                    ; boss_pos[3]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.729 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.978 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 255.717 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.963 ns )                    ; bullets_vertical[6]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.701 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.904 ns )                    ; boss_pos[3]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 255.664 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.904 ns )                    ; boss_pos[5]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.664 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.898 ns )                    ; bullets_horizontal[2] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.632 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.896 ns )                    ; bullets_vertical[7]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.634 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.883 ns )                    ; boss_pos[4]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.631 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.880 ns )                    ; boss_pos[6]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 255.622 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.856 ns )                    ; boss_pos[1]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 255.590 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.816 ns )                    ; bullets_vertical[3]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.554 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.806 ns )                    ; boss_pos[4]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 255.566 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.779 ns )                    ; bullets_vertical[4]   ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.517 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.777 ns )                    ; bullets_horizontal[3] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.511 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.772 ns )                    ; boss_pos[5]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.520 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.771 ns )                    ; boss_pos[2]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 255.505 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.767 ns )                    ; clouds_horizontal[2]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.518 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.749 ns )                    ; clouds_horizontal[3]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.500 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.695 ns )                    ; boss_pos[5]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 255.455 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.686 ns )                    ; boss_pos[3]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 255.420 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.665 ns )                    ; bullets_horizontal[4] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.399 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.658 ns )                    ; boss_pos[1]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.397 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.628 ns )                    ; clouds_horizontal[4]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.379 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.588 ns )                    ; boss_pos[4]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 255.322 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.581 ns )                    ; bullets_horizontal[5] ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.315 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.573 ns )                    ; boss_pos[2]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.312 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.548 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 255.278 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.542 ns )                    ; boss_pos[1]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.285 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.533 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 255.272 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.506 ns )                    ; bullets_horizontal[6] ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 255.248 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.488 ns )                    ; boss_pos[3]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.227 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.477 ns )                    ; boss_pos[5]           ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 255.211 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.457 ns )                    ; boss_pos[2]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.200 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.450 ns )                    ; boss_pos[6]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 255.183 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.435 ns )                    ; clouds_horizontal[5]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.186 ns              ;
+; N/A                                     ; 3.91 MHz ( period = 255.435 ns )                    ; boss_pos[6]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 255.177 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.422 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.179 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.410 ns )                    ; boss_pos[7]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 255.152 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.390 ns )                    ; boss_pos[4]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.129 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.372 ns )                    ; boss_pos[3]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.115 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.352 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[21] ; clk        ; clk      ; None                        ; None                      ; 255.080 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.340 ns )                    ; clouds_vertical[1]    ; killed_clouds_sum[20] ; clk        ; clk      ; None                        ; None                      ; 255.067 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.329 ns )                    ; clouds_horizontal[6]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.080 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.324 ns )                    ; boss_pos[6]           ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 255.084 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.323 ns )                    ; bullets_vertical[0]   ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 255.061 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.318 ns )                    ; clouds_horizontal[7]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 255.069 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.290 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 255.035 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.279 ns )                    ; boss_pos[5]           ; killed_clouds_sum[27] ; clk        ; clk      ; None                        ; None                      ; 255.018 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.274 ns )                    ; boss_pos[4]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 255.017 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.213 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 254.970 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.192 ns )                    ; boss_pos[6]           ; killed_clouds_sum[28] ; clk        ; clk      ; None                        ; None                      ; 254.940 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.169 ns )                    ; bullets_vertical[5]   ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 254.907 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.163 ns )                    ; boss_pos[5]           ; killed_clouds_sum[22] ; clk        ; clk      ; None                        ; None                      ; 254.906 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.155 ns )                    ; clouds_horizontal[8]  ; killed_clouds_sum[31] ; clk        ; clk      ; None                        ; None                      ; 254.906 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.136 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[19] ; clk        ; clk      ; None                        ; None                      ; 254.874 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.115 ns )                    ; boss_pos[6]           ; killed_clouds_sum[23] ; clk        ; clk      ; None                        ; None                      ; 254.875 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.089 ns )                    ; clouds_vertical[0]    ; killed_clouds_sum[18] ; clk        ; clk      ; None                        ; None                      ; 254.828 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.086 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[21] ; clk        ; clk      ; None                        ; None                      ; 254.814 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.084 ns )                    ; boss_pos[8]           ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 254.816 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.076 ns )                    ; bullets_horizontal[6] ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 254.809 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.074 ns )                    ; clouds_vertical[2]    ; killed_clouds_sum[20] ; clk        ; clk      ; None                        ; None                      ; 254.801 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.061 ns )                    ; bullets_horizontal[6] ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 254.803 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 255.029 ns )                    ; bullets_horizontal[7] ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 254.771 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.995 ns )                    ; clouds_vertical[8]    ; killed_clouds_sum[24] ; clk        ; clk      ; None                        ; None                      ; 254.726 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.980 ns )                    ; boss_pos[7]           ; killed_clouds_sum[30] ; clk        ; clk      ; None                        ; None                      ; 254.713 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.970 ns )                    ; bullets_horizontal[8] ; killed_clouds_sum[29] ; clk        ; clk      ; None                        ; None                      ; 254.712 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.965 ns )                    ; boss_pos[7]           ; killed_clouds_sum[26] ; clk        ; clk      ; None                        ; None                      ; 254.707 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.961 ns )                    ; clouds_vertical[3]    ; killed_clouds_sum[21] ; clk        ; clk      ; None                        ; None                      ; 254.689 ns              ;
+; N/A                                     ; 3.92 MHz ( period = 254.950 ns )                    ; bullets_horizontal[6] ; killed_clouds_sum[25] ; clk        ; clk      ; None                        ; None                      ; 254.710 ns              ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                       ;                       ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk'                                                                                                                                                                                                                            ;
++------------------------------------------+-----------------------------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                ; To                             ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+-----------------------------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[7]                          ; top:u2|Keyboard:u0|scancode[7] ; clk        ; clk      ; None                       ; None                       ; 1.073 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[0]                          ; top:u2|Keyboard:u0|scancode[0] ; clk        ; clk      ; None                       ; None                       ; 1.130 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[3]                          ; top:u2|Keyboard:u0|scancode[3] ; clk        ; clk      ; None                       ; None                       ; 1.362 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[2]                          ; top:u2|Keyboard:u0|scancode[2] ; clk        ; clk      ; None                       ; None                       ; 1.364 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[1]                          ; top:u2|Keyboard:u0|scancode[1] ; clk        ; clk      ; None                       ; None                       ; 1.363 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[4]                          ; top:u2|Keyboard:u0|scancode[4] ; clk        ; clk      ; None                       ; None                       ; 1.372 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[6]                          ; top:u2|Keyboard:u0|scancode[6] ; clk        ; clk      ; None                       ; None                       ; 1.379 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|code[5]                          ; top:u2|Keyboard:u0|scancode[5] ; clk        ; clk      ; None                       ; None                       ; 1.772 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 3.551 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 3.553 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 3.553 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[5]          ; clk        ; clk      ; None                       ; None                       ; 3.807 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_exist[1]               ; clk        ; clk      ; None                       ; None                       ; 3.808 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[4]          ; clk        ; clk      ; None                       ; None                       ; 3.808 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[2]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 3.809 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[2]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 3.811 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[2]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 3.811 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[5]          ; clk        ; clk      ; None                       ; None                       ; 3.984 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_exist[1]               ; clk        ; clk      ; None                       ; None                       ; 3.985 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[4]          ; clk        ; clk      ; None                       ; None                       ; 3.985 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[1]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 3.971 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[1]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 3.973 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[1]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 3.973 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[3]          ; clk        ; clk      ; None                       ; None                       ; 4.006 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[9]          ; clk        ; clk      ; None                       ; None                       ; 4.007 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[2]          ; clk        ; clk      ; None                       ; None                       ; 4.010 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 3.983 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 3.985 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 3.985 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[3]          ; clk        ; clk      ; None                       ; None                       ; 4.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[9]          ; clk        ; clk      ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[2]          ; clk        ; clk      ; None                       ; None                       ; 4.187 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[5]          ; clk        ; clk      ; None                       ; None                       ; 4.227 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_exist[1]               ; clk        ; clk      ; None                       ; None                       ; 4.228 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[4]          ; clk        ; clk      ; None                       ; None                       ; 4.228 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[5]          ; clk        ; clk      ; None                       ; None                       ; 4.297 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_exist[1]               ; clk        ; clk      ; None                       ; None                       ; 4.298 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[4]          ; clk        ; clk      ; None                       ; None                       ; 4.298 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[3]          ; clk        ; clk      ; None                       ; None                       ; 4.426 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[9]          ; clk        ; clk      ; None                       ; None                       ; 4.427 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[2]          ; clk        ; clk      ; None                       ; None                       ; 4.430 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[3]          ; clk        ; clk      ; None                       ; None                       ; 4.496 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[9]          ; clk        ; clk      ; None                       ; None                       ; 4.497 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[2]          ; clk        ; clk      ; None                       ; None                       ; 4.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 4.554 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 4.556 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 4.558 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 4.731 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 4.733 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 4.735 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 4.974 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 4.976 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 4.978 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; plane_up_speed[0]              ; clk        ; clk      ; None                       ; None                       ; 5.044 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; plane_up_speed[2]              ; clk        ; clk      ; None                       ; None                       ; 5.046 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; plane_up_speed[3]              ; clk        ; clk      ; None                       ; None                       ; 5.048 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 5.529 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[8]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[7]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[6]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[5]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[4]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[3]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[2]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[1]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[0]            ; clk        ; clk      ; None                       ; None                       ; 5.693 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[8]          ; clk        ; clk      ; None                       ; None                       ; 5.735 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[7]          ; clk        ; clk      ; None                       ; None                       ; 5.773 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[6]          ; clk        ; clk      ; None                       ; None                       ; 5.773 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[8]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[7]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[6]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[5]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[4]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[3]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[2]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[1]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[0]            ; clk        ; clk      ; None                       ; None                       ; 5.870 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[8]          ; clk        ; clk      ; None                       ; None                       ; 5.912 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[7]          ; clk        ; clk      ; None                       ; None                       ; 5.950 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[6]          ; clk        ; clk      ; None                       ; None                       ; 5.950 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[2]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 5.966 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[8]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[7]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[6]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[5]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[4]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[3]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[2]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[1]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[0]            ; clk        ; clk      ; None                       ; None                       ; 6.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[1]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.128 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[8]          ; clk        ; clk      ; None                       ; None                       ; 6.155 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.140 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[8]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[7]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[6]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[5]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[4]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[3]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[2]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[1]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[0]            ; clk        ; clk      ; None                       ; None                       ; 6.183 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[7]          ; clk        ; clk      ; None                       ; None                       ; 6.193 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[6]          ; clk        ; clk      ; None                       ; None                       ; 6.193 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[8]          ; clk        ; clk      ; None                       ; None                       ; 6.225 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.235 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[7]          ; clk        ; clk      ; None                       ; None                       ; 6.263 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[6]          ; clk        ; clk      ; None                       ; None                       ; 6.263 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_exist[4]               ; clk        ; clk      ; None                       ; None                       ; 6.336 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_exist[3]               ; clk        ; clk      ; None                       ; None                       ; 6.341 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_exist[2]               ; clk        ; clk      ; None                       ; None                       ; 6.343 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.412 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_exist[4]               ; clk        ; clk      ; None                       ; None                       ; 6.513 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_exist[3]               ; clk        ; clk      ; None                       ; None                       ; 6.518 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_exist[2]               ; clk        ; clk      ; None                       ; None                       ; 6.520 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.655 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; plane_up_speed[1]              ; clk        ; clk      ; None                       ; None                       ; 6.725 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[14]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[16]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[15]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[17]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[18]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[19]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[12]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_horizontal[13]         ; clk        ; clk      ; None                       ; None                       ; 6.736 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[17]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[16]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[15]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[14]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[13]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[12]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[11]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[10]           ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[7]                      ; bullets_vertical[9]            ; clk        ; clk      ; None                       ; None                       ; 6.764 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_exist[4]               ; clk        ; clk      ; None                       ; None                       ; 6.756 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_exist[3]               ; clk        ; clk      ; None                       ; None                       ; 6.761 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_exist[2]               ; clk        ; clk      ; None                       ; None                       ; 6.763 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_exist[4]               ; clk        ; clk      ; None                       ; None                       ; 6.826 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_exist[3]               ; clk        ; clk      ; None                       ; None                       ; 6.831 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_exist[2]               ; clk        ; clk      ; None                       ; None                       ; 6.833 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[14]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[16]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[15]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[17]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[18]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[19]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[12]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_horizontal[13]         ; clk        ; clk      ; None                       ; None                       ; 6.913 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[17]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[16]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[15]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[14]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[13]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[12]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[11]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[10]           ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[4]                      ; bullets_vertical[9]            ; clk        ; clk      ; None                       ; None                       ; 6.941 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[14]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[16]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[15]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[17]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[18]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[19]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[12]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_horizontal[13]         ; clk        ; clk      ; None                       ; None                       ; 7.156 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[17]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[16]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[15]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[14]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[13]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[12]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[11]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[10]           ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[6]                      ; bullets_vertical[9]            ; clk        ; clk      ; None                       ; None                       ; 7.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[14]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[16]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[15]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[17]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[18]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[19]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[12]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_horizontal[13]         ; clk        ; clk      ; None                       ; None                       ; 7.226 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[17]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[16]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[15]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[14]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[13]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[12]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[11]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[10]           ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[5]                      ; bullets_vertical[9]            ; clk        ; clk      ; None                       ; None                       ; 7.254 ns                 ;
+; Not operational: Clock Skew > Data Delay ; clockDivision:u0|singleClkDiv:u25|out_clk           ; clockDivision:u0|Pulse:t0|last ; clk        ; clk      ; None                       ; None                       ; 0.981 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; bullets_horizontal[7]          ; clk        ; clk      ; None                       ; None                       ; 7.814 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[0]                      ; bullets_horizontal[6]          ; clk        ; clk      ; None                       ; None                       ; 7.814 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; boss_bullets_exist[4]          ; clk        ; clk      ; None                       ; None                       ; 7.853 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; boss_bullets_exist[3]          ; clk        ; clk      ; None                       ; None                       ; 7.853 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; boss_bullets_exist[6]          ; clk        ; clk      ; None                       ; None                       ; 7.853 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; boss_bullets_exist[2]          ; clk        ; clk      ; None                       ; None                       ; 7.853 ns                 ;
+; Not operational: Clock Skew > Data Delay ; top:u2|Keyboard:u0|scancode[3]                      ; boss_bullets_exist[0]          ; clk        ; clk      ; None                       ; None                       ; 7.853 ns                 ;
+; Timing analysis restricted to 200 rows.  ; To change the limit use Settings (Assignments menu) ;                                ;            ;          ;                            ;                            ;                          ;
++------------------------------------------+-----------------------------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; tsu                                                                                         ;
++-------+--------------+------------+---------------+------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From          ; To                           ; To Clock ;
++-------+--------------+------------+---------------+------------------------------+----------+
+; N/A   ; None         ; 6.651 ns   ; keyboard_clk  ; top:u2|Keyboard:u0|clk1      ; clk      ;
+; N/A   ; None         ; 6.458 ns   ; keyboard_data ; top:u2|Keyboard:u0|data      ; clk      ;
+; N/A   ; None         ; 0.651 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[0] ; clk      ;
+; N/A   ; None         ; 0.491 ns   ; reset         ; vga_rom:u1|vga640480:u1|y[1] ; clk      ;
+; N/A   ; None         ; 0.332 ns   ; reset         ; vga_rom:u1|vga640480:u1|y[0] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[2] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[6] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[1] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[3] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[4] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[5] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[8] ; clk      ;
+; N/A   ; None         ; 0.057 ns   ; reset         ; vga_rom:u1|vga640480:u1|x[7] ; clk      ;
+; N/A   ; None         ; -0.161 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[9] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[2] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[6] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[5] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[4] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[8] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[7] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[9] ; clk      ;
+; N/A   ; None         ; -2.103 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[3] ; clk      ;
++-------+--------------+------------+---------------+------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------+
+; tco                                                                                       ;
++-------+--------------+------------+--------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                           ; To      ; From Clock ;
++-------+--------------+------------+--------------------------------+---------+------------+
+; N/A   ; None         ; 54.430 ns  ; state.s0                       ; seg2[5] ; clk        ;
+; N/A   ; None         ; 54.065 ns  ; state.s1                       ; seg2[6] ; clk        ;
+; N/A   ; None         ; 51.582 ns  ; state.s0                       ; seg2[4] ; clk        ;
+; N/A   ; None         ; 51.212 ns  ; state.s0                       ; seg2[6] ; clk        ;
+; N/A   ; None         ; 50.288 ns  ; state.s1                       ; seg2[3] ; clk        ;
+; N/A   ; None         ; 50.278 ns  ; state.s1                       ; seg2[2] ; clk        ;
+; N/A   ; None         ; 49.557 ns  ; state.s2                       ; seg2[1] ; clk        ;
+; N/A   ; None         ; 49.441 ns  ; state.s2                       ; seg2[5] ; clk        ;
+; N/A   ; None         ; 44.826 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[4] ; clk        ;
+; N/A   ; None         ; 44.650 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[5] ; clk        ;
+; N/A   ; None         ; 44.555 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[4] ; clk        ;
+; N/A   ; None         ; 44.380 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[5] ; clk        ;
+; N/A   ; None         ; 44.251 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[6] ; clk        ;
+; N/A   ; None         ; 44.211 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[4] ; clk        ;
+; N/A   ; None         ; 44.060 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[4] ; clk        ;
+; N/A   ; None         ; 44.036 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[5] ; clk        ;
+; N/A   ; None         ; 43.984 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[6] ; clk        ;
+; N/A   ; None         ; 43.886 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[5] ; clk        ;
+; N/A   ; None         ; 43.633 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[6] ; clk        ;
+; N/A   ; None         ; 43.488 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[6] ; clk        ;
+; N/A   ; None         ; 42.393 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[0] ; clk        ;
+; N/A   ; None         ; 42.063 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[0] ; clk        ;
+; N/A   ; None         ; 42.013 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[0] ; clk        ;
+; N/A   ; None         ; 42.010 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[0] ; clk        ;
+; N/A   ; None         ; 41.995 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[1] ; clk        ;
+; N/A   ; None         ; 41.989 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[3] ; clk        ;
+; N/A   ; None         ; 41.948 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[0] ; clk        ;
+; N/A   ; None         ; 41.945 ns  ; top:u2|Keyboard:u0|scancode[5] ; seg1[2] ; clk        ;
+; N/A   ; None         ; 41.915 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[1] ; clk        ;
+; N/A   ; None         ; 41.901 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[2] ; clk        ;
+; N/A   ; None         ; 41.895 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[1] ; clk        ;
+; N/A   ; None         ; 41.831 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[0] ; clk        ;
+; N/A   ; None         ; 41.721 ns  ; top:u2|Keyboard:u0|scancode[6] ; seg1[3] ; clk        ;
+; N/A   ; None         ; 41.701 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[0] ; clk        ;
+; N/A   ; None         ; 41.682 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[1] ; clk        ;
+; N/A   ; None         ; 41.669 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[2] ; clk        ;
+; N/A   ; None         ; 41.668 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[2] ; clk        ;
+; N/A   ; None         ; 41.619 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[1] ; clk        ;
+; N/A   ; None         ; 41.565 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[1] ; clk        ;
+; N/A   ; None         ; 41.532 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[0] ; clk        ;
+; N/A   ; None         ; 41.513 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[1] ; clk        ;
+; N/A   ; None         ; 41.494 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[2] ; clk        ;
+; N/A   ; None         ; 41.388 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[1] ; clk        ;
+; N/A   ; None         ; 41.371 ns  ; top:u2|Keyboard:u0|scancode[4] ; seg1[3] ; clk        ;
+; N/A   ; None         ; 41.328 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[3] ; clk        ;
+; N/A   ; None         ; 41.304 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[2] ; clk        ;
+; N/A   ; None         ; 41.290 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[2] ; clk        ;
+; N/A   ; None         ; 41.224 ns  ; top:u2|Keyboard:u0|scancode[7] ; seg1[3] ; clk        ;
+; N/A   ; None         ; 41.111 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[2] ; clk        ;
+; N/A   ; None         ; 41.008 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[3] ; clk        ;
+; N/A   ; None         ; 40.995 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[5] ; clk        ;
+; N/A   ; None         ; 40.987 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[6] ; clk        ;
+; N/A   ; None         ; 40.980 ns  ; top:u2|Keyboard:u0|scancode[0] ; seg0[4] ; clk        ;
+; N/A   ; None         ; 40.933 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[3] ; clk        ;
+; N/A   ; None         ; 40.758 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[3] ; clk        ;
+; N/A   ; None         ; 40.668 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[5] ; clk        ;
+; N/A   ; None         ; 40.665 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[6] ; clk        ;
+; N/A   ; None         ; 40.655 ns  ; top:u2|Keyboard:u0|scancode[1] ; seg0[4] ; clk        ;
+; N/A   ; None         ; 40.602 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[5] ; clk        ;
+; N/A   ; None         ; 40.593 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[4] ; clk        ;
+; N/A   ; None         ; 40.592 ns  ; top:u2|Keyboard:u0|scancode[3] ; seg0[6] ; clk        ;
+; N/A   ; None         ; 40.425 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[5] ; clk        ;
+; N/A   ; None         ; 40.416 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[6] ; clk        ;
+; N/A   ; None         ; 40.415 ns  ; top:u2|Keyboard:u0|scancode[2] ; seg0[4] ; clk        ;
+; N/A   ; None         ; 19.391 ns  ; vga_rom:u1|vga640480:u1|hs1    ; r[2]    ; clk        ;
+; N/A   ; None         ; 18.889 ns  ; vga_rom:u1|vga640480:u1|hs1    ; b[2]    ; clk        ;
+; N/A   ; None         ; 18.774 ns  ; vga_rom:u1|vga640480:u1|hs1    ; b[1]    ; clk        ;
+; N/A   ; None         ; 18.684 ns  ; vga_rom:u1|vga640480:u1|hs1    ; g[0]    ; clk        ;
+; N/A   ; None         ; 18.499 ns  ; vga_rom:u1|vga640480:u1|hs1    ; g[1]    ; clk        ;
+; N/A   ; None         ; 17.758 ns  ; vga_rom:u1|vga640480:u1|hs1    ; g[2]    ; clk        ;
+; N/A   ; None         ; 17.703 ns  ; vga_rom:u1|vga640480:u1|hs1    ; b[0]    ; clk        ;
+; N/A   ; None         ; 17.593 ns  ; vga_rom:u1|vga640480:u1|r1[2]  ; r[2]    ; clk        ;
+; N/A   ; None         ; 17.330 ns  ; vga_rom:u1|vga640480:u1|b1[1]  ; b[1]    ; clk        ;
+; N/A   ; None         ; 17.294 ns  ; vga_rom:u1|vga640480:u1|vs1    ; r[2]    ; clk        ;
+; N/A   ; None         ; 17.093 ns  ; vga_rom:u1|vga640480:u1|b1[2]  ; b[2]    ; clk        ;
+; N/A   ; None         ; 17.074 ns  ; vga_rom:u1|vga640480:u1|hs1    ; r[1]    ; clk        ;
+; N/A   ; None         ; 16.881 ns  ; vga_rom:u1|vga640480:u1|g1[0]  ; g[0]    ; clk        ;
+; N/A   ; None         ; 16.813 ns  ; vga_rom:u1|vga640480:u1|hs1    ; r[0]    ; clk        ;
+; N/A   ; None         ; 16.791 ns  ; vga_rom:u1|vga640480:u1|vs1    ; b[2]    ; clk        ;
+; N/A   ; None         ; 16.687 ns  ; vga_rom:u1|vga640480:u1|g1[1]  ; g[1]    ; clk        ;
+; N/A   ; None         ; 16.667 ns  ; vga_rom:u1|vga640480:u1|vs1    ; b[1]    ; clk        ;
+; N/A   ; None         ; 16.580 ns  ; vga_rom:u1|vga640480:u1|vs1    ; g[0]    ; clk        ;
+; N/A   ; None         ; 16.405 ns  ; vga_rom:u1|vga640480:u1|vs1    ; g[1]    ; clk        ;
+; N/A   ; None         ; 16.187 ns  ; vga_rom:u1|vga640480:u1|hs     ; hs      ; clk        ;
+; N/A   ; None         ; 15.988 ns  ; vga_rom:u1|vga640480:u1|vs1    ; g[2]    ; clk        ;
+; N/A   ; None         ; 15.983 ns  ; vga_rom:u1|vga640480:u1|g1[2]  ; g[2]    ; clk        ;
+; N/A   ; None         ; 15.887 ns  ; vga_rom:u1|vga640480:u1|b1[0]  ; b[0]    ; clk        ;
+; N/A   ; None         ; 15.595 ns  ; vga_rom:u1|vga640480:u1|vs1    ; b[0]    ; clk        ;
+; N/A   ; None         ; 15.321 ns  ; vga_rom:u1|vga640480:u1|vs1    ; r[1]    ; clk        ;
+; N/A   ; None         ; 15.295 ns  ; vga_rom:u1|vga640480:u1|r1[1]  ; r[1]    ; clk        ;
+; N/A   ; None         ; 15.057 ns  ; vga_rom:u1|vga640480:u1|vs1    ; r[0]    ; clk        ;
+; N/A   ; None         ; 15.049 ns  ; vga_rom:u1|vga640480:u1|r1[0]  ; r[0]    ; clk        ;
+; N/A   ; None         ; 14.697 ns  ; vga_rom:u1|vga640480:u1|vs     ; vs      ; clk        ;
++-------+--------------+------------+--------------------------------+---------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; th                                                                                                ;
++---------------+-------------+-----------+---------------+------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From          ; To                           ; To Clock ;
++---------------+-------------+-----------+---------------+------------------------------+----------+
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[2] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[6] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[5] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[4] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[8] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[7] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[9] ; clk      ;
+; N/A           ; None        ; 2.369 ns  ; reset         ; vga_rom:u1|vga640480:u1|y[3] ; clk      ;
+; N/A           ; None        ; 0.427 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[9] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[2] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[6] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[1] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[3] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[4] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[5] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[8] ; clk      ;
+; N/A           ; None        ; 0.209 ns  ; reset         ; vga_rom:u1|vga640480:u1|x[7] ; clk      ;
+; N/A           ; None        ; -0.066 ns ; reset         ; vga_rom:u1|vga640480:u1|y[0] ; clk      ;
+; N/A           ; None        ; -0.225 ns ; reset         ; vga_rom:u1|vga640480:u1|y[1] ; clk      ;
+; N/A           ; None        ; -0.385 ns ; reset         ; vga_rom:u1|vga640480:u1|x[0] ; clk      ;
+; N/A           ; None        ; -6.192 ns ; keyboard_data ; top:u2|Keyboard:u0|data      ; clk      ;
+; N/A           ; None        ; -6.385 ns ; keyboard_clk  ; top:u2|Keyboard:u0|clk1      ; clk      ;
++---------------+-------------+-----------+---------------+------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jun 11 19:47:41 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Logic -c Logic --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "top:u2|Keyboard:u0|scancode[1]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[2]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[3]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[5]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[6]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[4]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[7]" is a latch
+    Warning: Node "top:u2|Keyboard:u0|scancode[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 30 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "vga_rom:u1|vga640480:u1|clk1" as buffer
+    Info: Detected ripple clock "vga_rom:u1|vga640480:u1|clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u1|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u2|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u3|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u4|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u5|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u6|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u7|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u8|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u9|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u10|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u11|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u12|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u23|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u13|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u24|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u14|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u25|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u27|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u15|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u26|out_clk" as buffer
+    Info: Detected ripple clock "top:u2|Keyboard:u0|fok" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u16|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u17|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u18|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u19|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u20|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u21|out_clk" as buffer
+    Info: Detected ripple clock "clockDivision:u0|singleClkDiv:u22|out_clk" as buffer
+Info: Clock "clk" has Internal fmax of 3.84 MHz between source register "clouds_vertical[0]" and destination register "killed_clouds_sum[31]" (period= 260.402 ns)
+    Info: + Longest register to register delay is 260.141 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y21_N7; Fanout = 15; REG Node = 'clouds_vertical[0]'
+        Info: 2: + IC(1.217 ns) + CELL(0.596 ns) = 1.813 ns; Loc. = LCCOMB_X11_Y25_N12; Fanout = 2; COMB Node = 'Add80~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.190 ns) = 2.003 ns; Loc. = LCCOMB_X11_Y25_N14; Fanout = 2; COMB Node = 'Add80~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.506 ns) = 2.509 ns; Loc. = LCCOMB_X11_Y25_N16; Fanout = 2; COMB Node = 'Add80~4'
+        Info: 5: + IC(1.021 ns) + CELL(0.706 ns) = 4.236 ns; Loc. = LCCOMB_X13_Y25_N14; Fanout = 2; COMB Node = 'Add81~3'
+        Info: 6: + IC(0.000 ns) + CELL(0.086 ns) = 4.322 ns; Loc. = LCCOMB_X13_Y25_N16; Fanout = 2; COMB Node = 'Add81~5'
+        Info: 7: + IC(0.000 ns) + CELL(0.086 ns) = 4.408 ns; Loc. = LCCOMB_X13_Y25_N18; Fanout = 2; COMB Node = 'Add81~7'
+        Info: 8: + IC(0.000 ns) + CELL(0.506 ns) = 4.914 ns; Loc. = LCCOMB_X13_Y25_N20; Fanout = 9; COMB Node = 'Add81~8'
+        Info: 9: + IC(1.038 ns) + CELL(0.596 ns) = 6.548 ns; Loc. = LCCOMB_X12_Y25_N20; Fanout = 1; COMB Node = 'LessThan155~11'
+        Info: 10: + IC(0.000 ns) + CELL(0.086 ns) = 6.634 ns; Loc. = LCCOMB_X12_Y25_N22; Fanout = 1; COMB Node = 'LessThan155~13'
+        Info: 11: + IC(0.000 ns) + CELL(0.086 ns) = 6.720 ns; Loc. = LCCOMB_X12_Y25_N24; Fanout = 1; COMB Node = 'LessThan155~15'
+        Info: 12: + IC(0.000 ns) + CELL(0.506 ns) = 7.226 ns; Loc. = LCCOMB_X12_Y25_N26; Fanout = 1; COMB Node = 'LessThan155~16'
+        Info: 13: + IC(2.610 ns) + CELL(0.206 ns) = 10.042 ns; Loc. = LCCOMB_X22_Y18_N28; Fanout = 4; COMB Node = 'cross~147'
+        Info: 14: + IC(1.055 ns) + CELL(0.621 ns) = 11.718 ns; Loc. = LCCOMB_X22_Y16_N0; Fanout = 2; COMB Node = 'Add83~1'
+        Info: 15: + IC(0.000 ns) + CELL(0.086 ns) = 11.804 ns; Loc. = LCCOMB_X22_Y16_N2; Fanout = 2; COMB Node = 'Add83~3'
+        Info: 16: + IC(0.000 ns) + CELL(0.506 ns) = 12.310 ns; Loc. = LCCOMB_X22_Y16_N4; Fanout = 1; COMB Node = 'Add83~4'
+        Info: 17: + IC(1.817 ns) + CELL(0.206 ns) = 14.333 ns; Loc. = LCCOMB_X14_Y15_N26; Fanout = 3; COMB Node = 'Add83~93'
+        Info: 18: + IC(1.832 ns) + CELL(0.596 ns) = 16.761 ns; Loc. = LCCOMB_X22_Y14_N4; Fanout = 2; COMB Node = 'Add85~5'
+        Info: 19: + IC(0.000 ns) + CELL(0.506 ns) = 17.267 ns; Loc. = LCCOMB_X22_Y14_N6; Fanout = 1; COMB Node = 'Add85~6'
+        Info: 20: + IC(0.681 ns) + CELL(0.366 ns) = 18.314 ns; Loc. = LCCOMB_X23_Y14_N10; Fanout = 3; COMB Node = 'Add85~92'
+        Info: 21: + IC(0.699 ns) + CELL(0.621 ns) = 19.634 ns; Loc. = LCCOMB_X24_Y14_N6; Fanout = 2; COMB Node = 'Add87~7'
+        Info: 22: + IC(0.000 ns) + CELL(0.506 ns) = 20.140 ns; Loc. = LCCOMB_X24_Y14_N8; Fanout = 1; COMB Node = 'Add87~8'
+        Info: 23: + IC(0.676 ns) + CELL(0.366 ns) = 21.182 ns; Loc. = LCCOMB_X23_Y14_N6; Fanout = 3; COMB Node = 'Add87~91'
+        Info: 24: + IC(1.120 ns) + CELL(0.621 ns) = 22.923 ns; Loc. = LCCOMB_X24_Y16_N8; Fanout = 2; COMB Node = 'Add89~9'
+        Info: 25: + IC(0.000 ns) + CELL(0.506 ns) = 23.429 ns; Loc. = LCCOMB_X24_Y16_N10; Fanout = 1; COMB Node = 'Add89~10'
+        Info: 26: + IC(1.093 ns) + CELL(0.206 ns) = 24.728 ns; Loc. = LCCOMB_X24_Y18_N16; Fanout = 3; COMB Node = 'Add89~90'
+        Info: 27: + IC(1.049 ns) + CELL(0.623 ns) = 26.400 ns; Loc. = LCCOMB_X25_Y17_N10; Fanout = 1; COMB Node = 'Add91~10'
+        Info: 28: + IC(1.141 ns) + CELL(0.206 ns) = 27.747 ns; Loc. = LCCOMB_X27_Y17_N24; Fanout = 3; COMB Node = 'Add91~90'
+        Info: 29: + IC(0.681 ns) + CELL(0.623 ns) = 29.051 ns; Loc. = LCCOMB_X26_Y17_N10; Fanout = 1; COMB Node = 'Add93~10'
+        Info: 30: + IC(0.695 ns) + CELL(0.206 ns) = 29.952 ns; Loc. = LCCOMB_X27_Y17_N12; Fanout = 3; COMB Node = 'Add93~90'
+        Info: 31: + IC(1.110 ns) + CELL(0.623 ns) = 31.685 ns; Loc. = LCCOMB_X26_Y19_N10; Fanout = 1; COMB Node = 'Add95~10'
+        Info: 32: + IC(1.801 ns) + CELL(0.206 ns) = 33.692 ns; Loc. = LCCOMB_X31_Y20_N4; Fanout = 3; COMB Node = 'Add95~90'
+        Info: 33: + IC(1.477 ns) + CELL(0.596 ns) = 35.765 ns; Loc. = LCCOMB_X29_Y16_N10; Fanout = 2; COMB Node = 'Add97~14'
+        Info: 34: + IC(0.000 ns) + CELL(0.506 ns) = 36.271 ns; Loc. = LCCOMB_X29_Y16_N12; Fanout = 1; COMB Node = 'Add97~15'
+        Info: 35: + IC(1.795 ns) + CELL(0.206 ns) = 38.272 ns; Loc. = LCCOMB_X34_Y19_N28; Fanout = 1; COMB Node = 'Add97~117'
+        Info: 36: + IC(0.368 ns) + CELL(0.206 ns) = 38.846 ns; Loc. = LCCOMB_X34_Y19_N26; Fanout = 4; COMB Node = 'Add97~118'
+        Info: 37: + IC(1.409 ns) + CELL(0.623 ns) = 40.878 ns; Loc. = LCCOMB_X29_Y19_N12; Fanout = 1; COMB Node = 'Add102~12'
+        Info: 38: + IC(1.312 ns) + CELL(0.366 ns) = 42.556 ns; Loc. = LCCOMB_X34_Y19_N24; Fanout = 3; COMB Node = 'Add102~89'
+        Info: 39: + IC(1.479 ns) + CELL(0.623 ns) = 44.658 ns; Loc. = LCCOMB_X31_Y16_N12; Fanout = 1; COMB Node = 'Add104~12'
+        Info: 40: + IC(1.442 ns) + CELL(0.206 ns) = 46.306 ns; Loc. = LCCOMB_X34_Y19_N14; Fanout = 3; COMB Node = 'Add104~89'
+        Info: 41: + IC(1.038 ns) + CELL(0.596 ns) = 47.940 ns; Loc. = LCCOMB_X31_Y19_N12; Fanout = 2; COMB Node = 'Add106~13'
+        Info: 42: + IC(0.000 ns) + CELL(0.506 ns) = 48.446 ns; Loc. = LCCOMB_X31_Y19_N14; Fanout = 1; COMB Node = 'Add106~14'
+        Info: 43: + IC(1.106 ns) + CELL(0.366 ns) = 49.918 ns; Loc. = LCCOMB_X30_Y20_N4; Fanout = 3; COMB Node = 'Add106~88'
+        Info: 44: + IC(1.448 ns) + CELL(0.623 ns) = 51.989 ns; Loc. = LCCOMB_X32_Y19_N14; Fanout = 1; COMB Node = 'Add108~14'
+        Info: 45: + IC(1.778 ns) + CELL(0.206 ns) = 53.973 ns; Loc. = LCCOMB_X30_Y20_N26; Fanout = 3; COMB Node = 'Add108~88'
+        Info: 46: + IC(1.419 ns) + CELL(0.623 ns) = 56.015 ns; Loc. = LCCOMB_X33_Y19_N14; Fanout = 1; COMB Node = 'Add110~14'
+        Info: 47: + IC(1.772 ns) + CELL(0.206 ns) = 57.993 ns; Loc. = LCCOMB_X30_Y20_N10; Fanout = 3; COMB Node = 'Add110~88'
+        Info: 48: + IC(1.462 ns) + CELL(0.706 ns) = 60.161 ns; Loc. = LCCOMB_X33_Y17_N14; Fanout = 2; COMB Node = 'Add112~15'
+        Info: 49: + IC(0.000 ns) + CELL(0.506 ns) = 60.667 ns; Loc. = LCCOMB_X33_Y17_N16; Fanout = 1; COMB Node = 'Add112~16'
+        Info: 50: + IC(1.110 ns) + CELL(0.366 ns) = 62.143 ns; Loc. = LCCOMB_X32_Y20_N22; Fanout = 3; COMB Node = 'Add112~87'
+        Info: 51: + IC(1.438 ns) + CELL(0.623 ns) = 64.204 ns; Loc. = LCCOMB_X35_Y19_N16; Fanout = 1; COMB Node = 'Add114~16'
+        Info: 52: + IC(1.342 ns) + CELL(0.206 ns) = 65.752 ns; Loc. = LCCOMB_X32_Y20_N24; Fanout = 3; COMB Node = 'Add114~87'
+        Info: 53: + IC(1.487 ns) + CELL(0.621 ns) = 67.860 ns; Loc. = LCCOMB_X35_Y17_N16; Fanout = 2; COMB Node = 'Add116~17'
+        Info: 54: + IC(0.000 ns) + CELL(0.506 ns) = 68.366 ns; Loc. = LCCOMB_X35_Y17_N18; Fanout = 1; COMB Node = 'Add116~18'
+        Info: 55: + IC(1.133 ns) + CELL(0.206 ns) = 69.705 ns; Loc. = LCCOMB_X34_Y13_N2; Fanout = 1; COMB Node = 'Add116~108'
+        Info: 56: + IC(0.352 ns) + CELL(0.206 ns) = 70.263 ns; Loc. = LCCOMB_X34_Y13_N4; Fanout = 4; COMB Node = 'Add116~109'
+        Info: 57: + IC(1.450 ns) + CELL(0.596 ns) = 72.309 ns; Loc. = LCCOMB_X35_Y15_N18; Fanout = 2; COMB Node = 'Add121~19'
+        Info: 58: + IC(0.000 ns) + CELL(0.506 ns) = 72.815 ns; Loc. = LCCOMB_X35_Y15_N20; Fanout = 1; COMB Node = 'Add121~20'
+        Info: 59: + IC(1.900 ns) + CELL(0.206 ns) = 74.921 ns; Loc. = LCCOMB_X38_Y9_N8; Fanout = 3; COMB Node = 'Add121~85'
+        Info: 60: + IC(1.545 ns) + CELL(0.623 ns) = 77.089 ns; Loc. = LCCOMB_X37_Y15_N20; Fanout = 1; COMB Node = 'Add123~20'
+        Info: 61: + IC(1.546 ns) + CELL(0.366 ns) = 79.001 ns; Loc. = LCCOMB_X38_Y9_N22; Fanout = 3; COMB Node = 'Add123~85'
+        Info: 62: + IC(1.535 ns) + CELL(0.596 ns) = 81.132 ns; Loc. = LCCOMB_X38_Y15_N20; Fanout = 2; COMB Node = 'Add125~21'
+        Info: 63: + IC(0.000 ns) + CELL(0.506 ns) = 81.638 ns; Loc. = LCCOMB_X38_Y15_N22; Fanout = 1; COMB Node = 'Add125~22'
+        Info: 64: + IC(1.464 ns) + CELL(0.206 ns) = 83.308 ns; Loc. = LCCOMB_X36_Y19_N30; Fanout = 3; COMB Node = 'Add125~84'
+        Info: 65: + IC(1.524 ns) + CELL(0.596 ns) = 85.428 ns; Loc. = LCCOMB_X37_Y13_N22; Fanout = 2; COMB Node = 'Add127~23'
+        Info: 66: + IC(0.000 ns) + CELL(0.506 ns) = 85.934 ns; Loc. = LCCOMB_X37_Y13_N24; Fanout = 1; COMB Node = 'Add127~24'
+        Info: 67: + IC(1.431 ns) + CELL(0.206 ns) = 87.571 ns; Loc. = LCCOMB_X34_Y15_N24; Fanout = 3; COMB Node = 'Add127~83'
+        Info: 68: + IC(1.470 ns) + CELL(0.596 ns) = 89.637 ns; Loc. = LCCOMB_X37_Y11_N24; Fanout = 2; COMB Node = 'Add129~25'
+        Info: 69: + IC(0.000 ns) + CELL(0.506 ns) = 90.143 ns; Loc. = LCCOMB_X37_Y11_N26; Fanout = 1; COMB Node = 'Add129~26'
+        Info: 70: + IC(1.528 ns) + CELL(0.206 ns) = 91.877 ns; Loc. = LCCOMB_X37_Y17_N10; Fanout = 3; COMB Node = 'Add129~82'
+        Info: 71: + IC(1.466 ns) + CELL(0.623 ns) = 93.966 ns; Loc. = LCCOMB_X35_Y13_N26; Fanout = 1; COMB Node = 'Add131~26'
+        Info: 72: + IC(1.018 ns) + CELL(0.206 ns) = 95.190 ns; Loc. = LCCOMB_X33_Y13_N4; Fanout = 3; COMB Node = 'Add131~82'
+        Info: 73: + IC(1.467 ns) + CELL(0.647 ns) = 97.304 ns; Loc. = LCCOMB_X37_Y9_N26; Fanout = 1; COMB Node = 'Add133~26'
+        Info: 74: + IC(1.465 ns) + CELL(0.206 ns) = 98.975 ns; Loc. = LCCOMB_X33_Y13_N26; Fanout = 3; COMB Node = 'Add133~82'
+        Info: 75: + IC(1.479 ns) + CELL(0.623 ns) = 101.077 ns; Loc. = LCCOMB_X36_Y9_N26; Fanout = 1; COMB Node = 'Add135~26'
+        Info: 76: + IC(1.470 ns) + CELL(0.206 ns) = 102.753 ns; Loc. = LCCOMB_X33_Y13_N0; Fanout = 1; COMB Node = 'Add135~100'
+        Info: 77: + IC(0.360 ns) + CELL(0.206 ns) = 103.319 ns; Loc. = LCCOMB_X33_Y13_N10; Fanout = 4; COMB Node = 'Add135~101'
+        Info: 78: + IC(1.094 ns) + CELL(0.623 ns) = 105.036 ns; Loc. = LCCOMB_X34_Y11_N26; Fanout = 1; COMB Node = 'Add140~26'
+        Info: 79: + IC(1.077 ns) + CELL(0.206 ns) = 106.319 ns; Loc. = LCCOMB_X33_Y13_N12; Fanout = 3; COMB Node = 'Add140~82'
+        Info: 80: + IC(1.129 ns) + CELL(0.623 ns) = 108.071 ns; Loc. = LCCOMB_X34_Y9_N26; Fanout = 1; COMB Node = 'Add142~26'
+        Info: 81: + IC(1.115 ns) + CELL(0.366 ns) = 109.552 ns; Loc. = LCCOMB_X33_Y13_N30; Fanout = 3; COMB Node = 'Add142~82'
+        Info: 82: + IC(1.494 ns) + CELL(0.647 ns) = 111.693 ns; Loc. = LCCOMB_X34_Y7_N26; Fanout = 1; COMB Node = 'Add144~26'
+        Info: 83: + IC(1.525 ns) + CELL(0.206 ns) = 113.424 ns; Loc. = LCCOMB_X33_Y13_N24; Fanout = 3; COMB Node = 'Add144~82'
+        Info: 84: + IC(1.031 ns) + CELL(0.623 ns) = 115.078 ns; Loc. = LCCOMB_X32_Y11_N26; Fanout = 1; COMB Node = 'Add146~26'
+        Info: 85: + IC(1.446 ns) + CELL(0.206 ns) = 116.730 ns; Loc. = LCCOMB_X33_Y13_N14; Fanout = 3; COMB Node = 'Add146~82'
+        Info: 86: + IC(1.090 ns) + CELL(0.623 ns) = 118.443 ns; Loc. = LCCOMB_X32_Y9_N26; Fanout = 1; COMB Node = 'Add148~26'
+        Info: 87: + IC(1.441 ns) + CELL(0.206 ns) = 120.090 ns; Loc. = LCCOMB_X33_Y13_N20; Fanout = 3; COMB Node = 'Add148~82'
+        Info: 88: + IC(1.528 ns) + CELL(0.623 ns) = 122.241 ns; Loc. = LCCOMB_X32_Y6_N26; Fanout = 1; COMB Node = 'Add150~26'
+        Info: 89: + IC(1.520 ns) + CELL(0.206 ns) = 123.967 ns; Loc. = LCCOMB_X33_Y13_N18; Fanout = 3; COMB Node = 'Add150~82'
+        Info: 90: + IC(1.453 ns) + CELL(0.623 ns) = 126.043 ns; Loc. = LCCOMB_X30_Y9_N26; Fanout = 1; COMB Node = 'Add152~26'
+        Info: 91: + IC(1.045 ns) + CELL(0.206 ns) = 127.294 ns; Loc. = LCCOMB_X26_Y9_N12; Fanout = 3; COMB Node = 'Add152~82'
+        Info: 92: + IC(1.479 ns) + CELL(0.596 ns) = 129.369 ns; Loc. = LCCOMB_X30_Y7_N26; Fanout = 2; COMB Node = 'Add154~27'
+        Info: 93: + IC(0.000 ns) + CELL(0.506 ns) = 129.875 ns; Loc. = LCCOMB_X30_Y7_N28; Fanout = 1; COMB Node = 'Add154~28'
+        Info: 94: + IC(1.457 ns) + CELL(0.206 ns) = 131.538 ns; Loc. = LCCOMB_X27_Y9_N18; Fanout = 1; COMB Node = 'Add154~98'
+        Info: 95: + IC(0.352 ns) + CELL(0.206 ns) = 132.096 ns; Loc. = LCCOMB_X27_Y9_N24; Fanout = 4; COMB Node = 'Add154~99'
+        Info: 96: + IC(1.492 ns) + CELL(0.623 ns) = 134.211 ns; Loc. = LCCOMB_X30_Y5_N28; Fanout = 1; COMB Node = 'Add159~28'
+        Info: 97: + IC(1.464 ns) + CELL(0.206 ns) = 135.881 ns; Loc. = LCCOMB_X27_Y9_N26; Fanout = 3; COMB Node = 'Add159~81'
+        Info: 98: + IC(1.458 ns) + CELL(0.596 ns) = 137.935 ns; Loc. = LCCOMB_X29_Y8_N28; Fanout = 2; COMB Node = 'Add161~29'
+        Info: 99: + IC(0.000 ns) + CELL(0.506 ns) = 138.441 ns; Loc. = LCCOMB_X29_Y8_N30; Fanout = 1; COMB Node = 'Add161~30'
+        Info: 100: + IC(1.068 ns) + CELL(0.366 ns) = 139.875 ns; Loc. = LCCOMB_X30_Y11_N24; Fanout = 3; COMB Node = 'Add161~80'
+        Info: 101: + IC(1.469 ns) + CELL(0.705 ns) = 142.049 ns; Loc. = LCCOMB_X27_Y8_N30; Fanout = 2; COMB Node = 'Add163~31'
+        Info: 102: + IC(0.000 ns) + CELL(0.506 ns) = 142.555 ns; Loc. = LCCOMB_X27_Y7_N0; Fanout = 1; COMB Node = 'Add163~32'
+        Info: 103: + IC(1.435 ns) + CELL(0.206 ns) = 144.196 ns; Loc. = LCCOMB_X31_Y5_N16; Fanout = 3; COMB Node = 'Add163~79'
+        Info: 104: + IC(1.398 ns) + CELL(0.623 ns) = 146.217 ns; Loc. = LCCOMB_X26_Y4_N0; Fanout = 1; COMB Node = 'Add165~32'
+        Info: 105: + IC(1.391 ns) + CELL(0.206 ns) = 147.814 ns; Loc. = LCCOMB_X31_Y5_N22; Fanout = 3; COMB Node = 'Add165~79'
+        Info: 106: + IC(1.814 ns) + CELL(0.596 ns) = 150.224 ns; Loc. = LCCOMB_X25_Y4_N0; Fanout = 2; COMB Node = 'Add167~33'
+        Info: 107: + IC(0.000 ns) + CELL(0.506 ns) = 150.730 ns; Loc. = LCCOMB_X25_Y4_N2; Fanout = 1; COMB Node = 'Add167~34'
+        Info: 108: + IC(1.586 ns) + CELL(0.206 ns) = 152.522 ns; Loc. = LCCOMB_X29_Y5_N10; Fanout = 3; COMB Node = 'Add167~78'
+        Info: 109: + IC(1.408 ns) + CELL(0.596 ns) = 154.526 ns; Loc. = LCCOMB_X24_Y5_N2; Fanout = 2; COMB Node = 'Add169~35'
+        Info: 110: + IC(0.000 ns) + CELL(0.506 ns) = 155.032 ns; Loc. = LCCOMB_X24_Y5_N4; Fanout = 1; COMB Node = 'Add169~36'
+        Info: 111: + IC(1.423 ns) + CELL(0.206 ns) = 156.661 ns; Loc. = LCCOMB_X20_Y4_N24; Fanout = 3; COMB Node = 'Add169~77'
+        Info: 112: + IC(1.464 ns) + CELL(0.623 ns) = 158.748 ns; Loc. = LCCOMB_X24_Y7_N4; Fanout = 1; COMB Node = 'Add171~36'
+        Info: 113: + IC(1.469 ns) + CELL(0.366 ns) = 160.583 ns; Loc. = LCCOMB_X20_Y4_N10; Fanout = 3; COMB Node = 'Add171~77'
+        Info: 114: + IC(1.429 ns) + CELL(0.623 ns) = 162.635 ns; Loc. = LCCOMB_X22_Y5_N4; Fanout = 1; COMB Node = 'Add173~36'
+        Info: 115: + IC(1.408 ns) + CELL(0.206 ns) = 164.249 ns; Loc. = LCCOMB_X20_Y4_N28; Fanout = 1; COMB Node = 'Add173~90'
+        Info: 116: + IC(0.359 ns) + CELL(0.206 ns) = 164.814 ns; Loc. = LCCOMB_X20_Y4_N30; Fanout = 4; COMB Node = 'Add173~91'
+        Info: 117: + IC(1.482 ns) + CELL(0.596 ns) = 166.892 ns; Loc. = LCCOMB_X22_Y7_N4; Fanout = 2; COMB Node = 'Add178~37'
+        Info: 118: + IC(0.000 ns) + CELL(0.506 ns) = 167.398 ns; Loc. = LCCOMB_X22_Y7_N6; Fanout = 1; COMB Node = 'Add178~38'
+        Info: 119: + IC(1.436 ns) + CELL(0.206 ns) = 169.040 ns; Loc. = LCCOMB_X18_Y5_N14; Fanout = 3; COMB Node = 'Add178~76'
+        Info: 120: + IC(1.477 ns) + CELL(0.623 ns) = 171.140 ns; Loc. = LCCOMB_X21_Y7_N6; Fanout = 1; COMB Node = 'Add180~38'
+        Info: 121: + IC(1.438 ns) + CELL(0.206 ns) = 172.784 ns; Loc. = LCCOMB_X18_Y5_N16; Fanout = 3; COMB Node = 'Add180~76'
+        Info: 122: + IC(1.115 ns) + CELL(0.647 ns) = 174.546 ns; Loc. = LCCOMB_X19_Y3_N6; Fanout = 1; COMB Node = 'Add182~38'
+        Info: 123: + IC(1.092 ns) + CELL(0.206 ns) = 175.844 ns; Loc. = LCCOMB_X18_Y5_N22; Fanout = 3; COMB Node = 'Add182~76'
+        Info: 124: + IC(1.100 ns) + CELL(0.596 ns) = 177.540 ns; Loc. = LCCOMB_X19_Y7_N6; Fanout = 2; COMB Node = 'Add184~39'
+        Info: 125: + IC(0.000 ns) + CELL(0.506 ns) = 178.046 ns; Loc. = LCCOMB_X19_Y7_N8; Fanout = 1; COMB Node = 'Add184~40'
+        Info: 126: + IC(1.430 ns) + CELL(0.206 ns) = 179.682 ns; Loc. = LCCOMB_X18_Y3_N8; Fanout = 3; COMB Node = 'Add184~75'
+        Info: 127: + IC(1.486 ns) + CELL(0.596 ns) = 181.764 ns; Loc. = LCCOMB_X16_Y5_N8; Fanout = 2; COMB Node = 'Add186~41'
+        Info: 128: + IC(0.000 ns) + CELL(0.506 ns) = 182.270 ns; Loc. = LCCOMB_X16_Y5_N10; Fanout = 1; COMB Node = 'Add186~42'
+        Info: 129: + IC(1.468 ns) + CELL(0.206 ns) = 183.944 ns; Loc. = LCCOMB_X18_Y7_N2; Fanout = 3; COMB Node = 'Add186~74'
+        Info: 130: + IC(1.087 ns) + CELL(0.623 ns) = 185.654 ns; Loc. = LCCOMB_X19_Y5_N10; Fanout = 1; COMB Node = 'Add188~42'
+        Info: 131: + IC(1.106 ns) + CELL(0.366 ns) = 187.126 ns; Loc. = LCCOMB_X18_Y7_N4; Fanout = 3; COMB Node = 'Add188~74'
+        Info: 132: + IC(1.556 ns) + CELL(0.596 ns) = 189.278 ns; Loc. = LCCOMB_X15_Y5_N10; Fanout = 2; COMB Node = 'Add190~43'
+        Info: 133: + IC(0.000 ns) + CELL(0.506 ns) = 189.784 ns; Loc. = LCCOMB_X15_Y5_N12; Fanout = 1; COMB Node = 'Add190~44'
+        Info: 134: + IC(1.772 ns) + CELL(0.206 ns) = 191.762 ns; Loc. = LCCOMB_X20_Y3_N10; Fanout = 3; COMB Node = 'Add190~73'
+        Info: 135: + IC(1.814 ns) + CELL(0.623 ns) = 194.199 ns; Loc. = LCCOMB_X14_Y5_N12; Fanout = 1; COMB Node = 'Add192~44'
+        Info: 136: + IC(1.852 ns) + CELL(0.206 ns) = 196.257 ns; Loc. = LCCOMB_X12_Y10_N12; Fanout = 1; COMB Node = 'Add192~82'
+        Info: 137: + IC(0.360 ns) + CELL(0.206 ns) = 196.823 ns; Loc. = LCCOMB_X12_Y10_N30; Fanout = 4; COMB Node = 'Add192~83'
+        Info: 138: + IC(1.098 ns) + CELL(0.623 ns) = 198.544 ns; Loc. = LCCOMB_X13_Y7_N12; Fanout = 1; COMB Node = 'Add197~44'
+        Info: 139: + IC(1.109 ns) + CELL(0.366 ns) = 200.019 ns; Loc. = LCCOMB_X12_Y10_N24; Fanout = 3; COMB Node = 'Add197~73'
+        Info: 140: + IC(1.100 ns) + CELL(0.596 ns) = 201.715 ns; Loc. = LCCOMB_X12_Y7_N12; Fanout = 2; COMB Node = 'Add199~45'
+        Info: 141: + IC(0.000 ns) + CELL(0.506 ns) = 202.221 ns; Loc. = LCCOMB_X12_Y7_N14; Fanout = 1; COMB Node = 'Add199~46'
+        Info: 142: + IC(1.084 ns) + CELL(0.206 ns) = 203.511 ns; Loc. = LCCOMB_X16_Y7_N12; Fanout = 3; COMB Node = 'Add199~72'
+        Info: 143: + IC(1.445 ns) + CELL(0.735 ns) = 205.691 ns; Loc. = LCCOMB_X11_Y7_N14; Fanout = 2; COMB Node = 'Add201~47'
+        Info: 144: + IC(0.000 ns) + CELL(0.086 ns) = 205.777 ns; Loc. = LCCOMB_X11_Y7_N16; Fanout = 2; COMB Node = 'Add201~49'
+        Info: 145: + IC(0.000 ns) + CELL(0.506 ns) = 206.283 ns; Loc. = LCCOMB_X11_Y7_N18; Fanout = 1; COMB Node = 'Add201~50'
+        Info: 146: + IC(1.431 ns) + CELL(0.206 ns) = 207.920 ns; Loc. = LCCOMB_X13_Y5_N18; Fanout = 3; COMB Node = 'Add201~70'
+        Info: 147: + IC(1.489 ns) + CELL(0.621 ns) = 210.030 ns; Loc. = LCCOMB_X11_Y9_N18; Fanout = 2; COMB Node = 'Add203~51'
+        Info: 148: + IC(0.000 ns) + CELL(0.506 ns) = 210.536 ns; Loc. = LCCOMB_X11_Y9_N20; Fanout = 1; COMB Node = 'Add203~52'
+        Info: 149: + IC(1.431 ns) + CELL(0.206 ns) = 212.173 ns; Loc. = LCCOMB_X15_Y7_N10; Fanout = 3; COMB Node = 'Add203~69'
+        Info: 150: + IC(1.822 ns) + CELL(0.623 ns) = 214.618 ns; Loc. = LCCOMB_X9_Y9_N20; Fanout = 1; COMB Node = 'Add205~52'
+        Info: 151: + IC(1.799 ns) + CELL(0.206 ns) = 216.623 ns; Loc. = LCCOMB_X15_Y7_N8; Fanout = 3; COMB Node = 'Add205~69'
+        Info: 152: + IC(1.480 ns) + CELL(0.623 ns) = 218.726 ns; Loc. = LCCOMB_X11_Y11_N20; Fanout = 1; COMB Node = 'Add207~52'
+        Info: 153: + IC(1.525 ns) + CELL(0.206 ns) = 220.457 ns; Loc. = LCCOMB_X15_Y7_N2; Fanout = 3; COMB Node = 'Add207~69'
+        Info: 154: + IC(1.454 ns) + CELL(0.596 ns) = 222.507 ns; Loc. = LCCOMB_X13_Y10_N20; Fanout = 2; COMB Node = 'Add209~53'
+        Info: 155: + IC(0.000 ns) + CELL(0.506 ns) = 223.013 ns; Loc. = LCCOMB_X13_Y10_N22; Fanout = 1; COMB Node = 'Add209~54'
+        Info: 156: + IC(1.086 ns) + CELL(0.366 ns) = 224.465 ns; Loc. = LCCOMB_X12_Y9_N2; Fanout = 3; COMB Node = 'Add209~68'
+        Info: 157: + IC(1.441 ns) + CELL(0.596 ns) = 226.502 ns; Loc. = LCCOMB_X14_Y10_N22; Fanout = 2; COMB Node = 'Add211~55'
+        Info: 158: + IC(0.000 ns) + CELL(0.506 ns) = 227.008 ns; Loc. = LCCOMB_X14_Y10_N24; Fanout = 1; COMB Node = 'Add211~56'
+        Info: 159: + IC(1.858 ns) + CELL(0.206 ns) = 229.072 ns; Loc. = LCCOMB_X19_Y12_N22; Fanout = 1; COMB Node = 'Add211~70'
+        Info: 160: + IC(0.359 ns) + CELL(0.206 ns) = 229.637 ns; Loc. = LCCOMB_X19_Y12_N16; Fanout = 4; COMB Node = 'Add211~71'
+        Info: 161: + IC(1.078 ns) + CELL(0.623 ns) = 231.338 ns; Loc. = LCCOMB_X15_Y11_N24; Fanout = 1; COMB Node = 'Add216~56'
+        Info: 162: + IC(1.473 ns) + CELL(0.206 ns) = 233.017 ns; Loc. = LCCOMB_X19_Y12_N26; Fanout = 3; COMB Node = 'Add216~67'
+        Info: 163: + IC(1.476 ns) + CELL(0.623 ns) = 235.116 ns; Loc. = LCCOMB_X16_Y11_N24; Fanout = 1; COMB Node = 'Add218~56'
+        Info: 164: + IC(1.461 ns) + CELL(0.206 ns) = 236.783 ns; Loc. = LCCOMB_X19_Y12_N24; Fanout = 3; COMB Node = 'Add218~67'
+        Info: 165: + IC(1.506 ns) + CELL(0.596 ns) = 238.885 ns; Loc. = LCCOMB_X16_Y14_N24; Fanout = 2; COMB Node = 'Add220~57'
+        Info: 166: + IC(0.000 ns) + CELL(0.506 ns) = 239.391 ns; Loc. = LCCOMB_X16_Y14_N26; Fanout = 1; COMB Node = 'Add220~58'
+        Info: 167: + IC(1.496 ns) + CELL(0.206 ns) = 241.093 ns; Loc. = LCCOMB_X18_Y11_N10; Fanout = 3; COMB Node = 'Add220~66'
+        Info: 168: + IC(1.092 ns) + CELL(0.596 ns) = 242.781 ns; Loc. = LCCOMB_X19_Y10_N26; Fanout = 2; COMB Node = 'Add222~59'
+        Info: 169: + IC(0.000 ns) + CELL(0.086 ns) = 242.867 ns; Loc. = LCCOMB_X19_Y10_N28; Fanout = 1; COMB Node = 'Add222~61'
+        Info: 170: + IC(0.000 ns) + CELL(0.506 ns) = 243.373 ns; Loc. = LCCOMB_X19_Y10_N30; Fanout = 1; COMB Node = 'Add222~62'
+        Info: 171: + IC(1.609 ns) + CELL(0.366 ns) = 245.348 ns; Loc. = LCCOMB_X15_Y14_N24; Fanout = 2; COMB Node = 'Add222~64'
+        Info: 172: + IC(1.470 ns) + CELL(0.206 ns) = 247.024 ns; Loc. = LCCOMB_X18_Y13_N30; Fanout = 1; COMB Node = 'Add224~62'
+        Info: 173: + IC(1.462 ns) + CELL(0.206 ns) = 248.692 ns; Loc. = LCCOMB_X15_Y14_N14; Fanout = 2; COMB Node = 'Add224~64'
+        Info: 174: + IC(1.509 ns) + CELL(0.206 ns) = 250.407 ns; Loc. = LCCOMB_X19_Y13_N30; Fanout = 1; COMB Node = 'Add226~62'
+        Info: 175: + IC(1.509 ns) + CELL(0.206 ns) = 252.122 ns; Loc. = LCCOMB_X15_Y14_N4; Fanout = 2; COMB Node = 'Add226~64'
+        Info: 176: + IC(1.825 ns) + CELL(0.206 ns) = 254.153 ns; Loc. = LCCOMB_X20_Y11_N30; Fanout = 1; COMB Node = 'Add228~62'
+        Info: 177: + IC(1.537 ns) + CELL(0.206 ns) = 255.896 ns; Loc. = LCCOMB_X15_Y14_N28; Fanout = 2; COMB Node = 'Add228~64'
+        Info: 178: + IC(1.858 ns) + CELL(0.206 ns) = 257.960 ns; Loc. = LCCOMB_X21_Y10_N30; Fanout = 1; COMB Node = 'Add230~62'
+        Info: 179: + IC(1.867 ns) + CELL(0.206 ns) = 260.033 ns; Loc. = LCCOMB_X15_Y14_N16; Fanout = 1; COMB Node = 'killed_clouds_sum[31]~4448'
+        Info: 180: + IC(0.000 ns) + CELL(0.108 ns) = 260.141 ns; Loc. = LCFF_X15_Y14_N17; Fanout = 4; REG Node = 'killed_clouds_sum[31]'
+        Info: Total cell delay = 73.399 ns ( 28.22 % )
+        Info: Total interconnect delay = 186.742 ns ( 71.78 % )
+    Info: - Smallest clock skew is 0.003 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 43.981 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(0.930 ns) + CELL(0.970 ns) = 3.060 ns; Loc. = LCFF_X24_Y26_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u1|out_clk'
+            Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.416 ns; Loc. = LCFF_X24_Y26_N1; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u2|out_clk'
+            Info: 4: + IC(2.018 ns) + CELL(0.970 ns) = 7.404 ns; Loc. = LCFF_X8_Y26_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u3|out_clk'
+            Info: 5: + IC(1.089 ns) + CELL(0.970 ns) = 9.463 ns; Loc. = LCFF_X7_Y24_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u4|out_clk'
+            Info: 6: + IC(0.386 ns) + CELL(0.970 ns) = 10.819 ns; Loc. = LCFF_X7_Y24_N29; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u5|out_clk'
+            Info: 7: + IC(1.102 ns) + CELL(0.970 ns) = 12.891 ns; Loc. = LCFF_X6_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u6|out_clk'
+            Info: 8: + IC(0.386 ns) + CELL(0.970 ns) = 14.247 ns; Loc. = LCFF_X6_Y20_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u7|out_clk'
+            Info: 9: + IC(1.021 ns) + CELL(0.970 ns) = 16.238 ns; Loc. = LCFF_X3_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u8|out_clk'
+            Info: 10: + IC(0.386 ns) + CELL(0.970 ns) = 17.594 ns; Loc. = LCFF_X3_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u9|out_clk'
+            Info: 11: + IC(0.603 ns) + CELL(0.970 ns) = 19.167 ns; Loc. = LCFF_X2_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u10|out_clk'
+            Info: 12: + IC(0.386 ns) + CELL(0.970 ns) = 20.523 ns; Loc. = LCFF_X2_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u11|out_clk'
+            Info: 13: + IC(0.603 ns) + CELL(0.970 ns) = 22.096 ns; Loc. = LCFF_X1_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u12|out_clk'
+            Info: 14: + IC(0.386 ns) + CELL(0.970 ns) = 23.452 ns; Loc. = LCFF_X1_Y20_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u13|out_clk'
+            Info: 15: + IC(0.682 ns) + CELL(0.970 ns) = 25.104 ns; Loc. = LCFF_X1_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u14|out_clk'
+            Info: 16: + IC(0.386 ns) + CELL(0.970 ns) = 26.460 ns; Loc. = LCFF_X1_Y19_N15; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u15|out_clk'
+            Info: 17: + IC(0.599 ns) + CELL(0.970 ns) = 28.029 ns; Loc. = LCFF_X2_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u16|out_clk'
+            Info: 18: + IC(0.386 ns) + CELL(0.970 ns) = 29.385 ns; Loc. = LCFF_X2_Y19_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u17|out_clk'
+            Info: 19: + IC(1.018 ns) + CELL(0.970 ns) = 31.373 ns; Loc. = LCFF_X3_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u18|out_clk'
+            Info: 20: + IC(0.386 ns) + CELL(0.970 ns) = 32.729 ns; Loc. = LCFF_X3_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u19|out_clk'
+            Info: 21: + IC(0.603 ns) + CELL(0.970 ns) = 34.302 ns; Loc. = LCFF_X2_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u20|out_clk'
+            Info: 22: + IC(0.386 ns) + CELL(0.970 ns) = 35.658 ns; Loc. = LCFF_X2_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u21|out_clk'
+            Info: 23: + IC(0.602 ns) + CELL(0.970 ns) = 37.230 ns; Loc. = LCFF_X1_Y18_N31; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u22|out_clk'
+            Info: 24: + IC(5.015 ns) + CELL(0.000 ns) = 42.245 ns; Loc. = CLKCTRL_G3; Fanout = 528; COMB Node = 'clockDivision:u0|singleClkDiv:u22|out_clk~clkctrl'
+            Info: 25: + IC(1.070 ns) + CELL(0.666 ns) = 43.981 ns; Loc. = LCFF_X15_Y14_N17; Fanout = 4; REG Node = 'killed_clouds_sum[31]'
+            Info: Total cell delay = 23.166 ns ( 52.67 % )
+            Info: Total interconnect delay = 20.815 ns ( 47.33 % )
+        Info: - Longest clock path from clock "clk" to source register is 43.978 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(0.930 ns) + CELL(0.970 ns) = 3.060 ns; Loc. = LCFF_X24_Y26_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u1|out_clk'
+            Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.416 ns; Loc. = LCFF_X24_Y26_N1; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u2|out_clk'
+            Info: 4: + IC(2.018 ns) + CELL(0.970 ns) = 7.404 ns; Loc. = LCFF_X8_Y26_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u3|out_clk'
+            Info: 5: + IC(1.089 ns) + CELL(0.970 ns) = 9.463 ns; Loc. = LCFF_X7_Y24_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u4|out_clk'
+            Info: 6: + IC(0.386 ns) + CELL(0.970 ns) = 10.819 ns; Loc. = LCFF_X7_Y24_N29; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u5|out_clk'
+            Info: 7: + IC(1.102 ns) + CELL(0.970 ns) = 12.891 ns; Loc. = LCFF_X6_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u6|out_clk'
+            Info: 8: + IC(0.386 ns) + CELL(0.970 ns) = 14.247 ns; Loc. = LCFF_X6_Y20_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u7|out_clk'
+            Info: 9: + IC(1.021 ns) + CELL(0.970 ns) = 16.238 ns; Loc. = LCFF_X3_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u8|out_clk'
+            Info: 10: + IC(0.386 ns) + CELL(0.970 ns) = 17.594 ns; Loc. = LCFF_X3_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u9|out_clk'
+            Info: 11: + IC(0.603 ns) + CELL(0.970 ns) = 19.167 ns; Loc. = LCFF_X2_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u10|out_clk'
+            Info: 12: + IC(0.386 ns) + CELL(0.970 ns) = 20.523 ns; Loc. = LCFF_X2_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u11|out_clk'
+            Info: 13: + IC(0.603 ns) + CELL(0.970 ns) = 22.096 ns; Loc. = LCFF_X1_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u12|out_clk'
+            Info: 14: + IC(0.386 ns) + CELL(0.970 ns) = 23.452 ns; Loc. = LCFF_X1_Y20_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u13|out_clk'
+            Info: 15: + IC(0.682 ns) + CELL(0.970 ns) = 25.104 ns; Loc. = LCFF_X1_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u14|out_clk'
+            Info: 16: + IC(0.386 ns) + CELL(0.970 ns) = 26.460 ns; Loc. = LCFF_X1_Y19_N15; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u15|out_clk'
+            Info: 17: + IC(0.599 ns) + CELL(0.970 ns) = 28.029 ns; Loc. = LCFF_X2_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u16|out_clk'
+            Info: 18: + IC(0.386 ns) + CELL(0.970 ns) = 29.385 ns; Loc. = LCFF_X2_Y19_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u17|out_clk'
+            Info: 19: + IC(1.018 ns) + CELL(0.970 ns) = 31.373 ns; Loc. = LCFF_X3_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u18|out_clk'
+            Info: 20: + IC(0.386 ns) + CELL(0.970 ns) = 32.729 ns; Loc. = LCFF_X3_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u19|out_clk'
+            Info: 21: + IC(0.603 ns) + CELL(0.970 ns) = 34.302 ns; Loc. = LCFF_X2_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u20|out_clk'
+            Info: 22: + IC(0.386 ns) + CELL(0.970 ns) = 35.658 ns; Loc. = LCFF_X2_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u21|out_clk'
+            Info: 23: + IC(0.602 ns) + CELL(0.970 ns) = 37.230 ns; Loc. = LCFF_X1_Y18_N31; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u22|out_clk'
+            Info: 24: + IC(5.015 ns) + CELL(0.000 ns) = 42.245 ns; Loc. = CLKCTRL_G3; Fanout = 528; COMB Node = 'clockDivision:u0|singleClkDiv:u22|out_clk~clkctrl'
+            Info: 25: + IC(1.067 ns) + CELL(0.666 ns) = 43.978 ns; Loc. = LCFF_X10_Y21_N7; Fanout = 15; REG Node = 'clouds_vertical[0]'
+            Info: Total cell delay = 23.166 ns ( 52.68 % )
+            Info: Total interconnect delay = 20.812 ns ( 47.32 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Warning: Circuit may not operate. Detected 201 non-operational path(s) clocked by clock "clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "top:u2|Keyboard:u0|code[7]" and destination pin or register "top:u2|Keyboard:u0|scancode[7]" for clock "clk" (Hold time is 30.836 ns)
+    Info: + Largest clock skew is 32.213 ns
+        Info: + Longest clock path from clock "clk" to destination register is 35.369 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(0.931 ns) + CELL(0.970 ns) = 3.061 ns; Loc. = LCFF_X23_Y26_N15; Fanout = 1; REG Node = 'top:u2|Keyboard:u0|fok'
+            Info: 3: + IC(30.486 ns) + CELL(0.000 ns) = 33.547 ns; Loc. = CLKCTRL_G9; Fanout = 8; COMB Node = 'top:u2|Keyboard:u0|fok~clkctrl'
+            Info: 4: + IC(1.616 ns) + CELL(0.206 ns) = 35.369 ns; Loc. = LCCOMB_X10_Y3_N8; Fanout = 8; REG Node = 'top:u2|Keyboard:u0|scancode[7]'
+            Info: Total cell delay = 2.336 ns ( 6.60 % )
+            Info: Total interconnect delay = 33.033 ns ( 93.40 % )
+        Info: - Shortest clock path from clock "clk" to source register is 3.156 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+            Info: 2: + IC(0.251 ns) + CELL(0.000 ns) = 1.411 ns; Loc. = CLKCTRL_G10; Fanout = 24; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(1.079 ns) + CELL(0.666 ns) = 3.156 ns; Loc. = LCFF_X10_Y3_N31; Fanout = 3; REG Node = 'top:u2|Keyboard:u0|code[7]'
+            Info: Total cell delay = 1.826 ns ( 57.86 % )
+            Info: Total interconnect delay = 1.330 ns ( 42.14 % )
+    Info: - Micro clock to output delay of source is 0.304 ns
+    Info: - Shortest register to register delay is 1.073 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y3_N31; Fanout = 3; REG Node = 'top:u2|Keyboard:u0|code[7]'
+        Info: 2: + IC(0.449 ns) + CELL(0.624 ns) = 1.073 ns; Loc. = LCCOMB_X10_Y3_N8; Fanout = 8; REG Node = 'top:u2|Keyboard:u0|scancode[7]'
+        Info: Total cell delay = 0.624 ns ( 58.15 % )
+        Info: Total interconnect delay = 0.449 ns ( 41.85 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "top:u2|Keyboard:u0|clk1" (data pin = "keyboard_clk", clock pin = "clk") is 6.651 ns
+    Info: + Longest pin to register delay is 9.847 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = PIN_195; Fanout = 1; PIN Node = 'keyboard_clk'
+        Info: 2: + IC(8.383 ns) + CELL(0.460 ns) = 9.847 ns; Loc. = LCFF_X9_Y3_N31; Fanout = 4; REG Node = 'top:u2|Keyboard:u0|clk1'
+        Info: Total cell delay = 1.464 ns ( 14.87 % )
+        Info: Total interconnect delay = 8.383 ns ( 85.13 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 3.156 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(0.251 ns) + CELL(0.000 ns) = 1.411 ns; Loc. = CLKCTRL_G10; Fanout = 24; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.079 ns) + CELL(0.666 ns) = 3.156 ns; Loc. = LCFF_X9_Y3_N31; Fanout = 4; REG Node = 'top:u2|Keyboard:u0|clk1'
+        Info: Total cell delay = 1.826 ns ( 57.86 % )
+        Info: Total interconnect delay = 1.330 ns ( 42.14 % )
+Info: tco from clock "clk" to destination pin "seg2[5]" through register "state.s0" is 54.430 ns
+    Info: + Longest clock path from clock "clk" to source register is 43.975 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(0.930 ns) + CELL(0.970 ns) = 3.060 ns; Loc. = LCFF_X24_Y26_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u1|out_clk'
+        Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.416 ns; Loc. = LCFF_X24_Y26_N1; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u2|out_clk'
+        Info: 4: + IC(2.018 ns) + CELL(0.970 ns) = 7.404 ns; Loc. = LCFF_X8_Y26_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u3|out_clk'
+        Info: 5: + IC(1.089 ns) + CELL(0.970 ns) = 9.463 ns; Loc. = LCFF_X7_Y24_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u4|out_clk'
+        Info: 6: + IC(0.386 ns) + CELL(0.970 ns) = 10.819 ns; Loc. = LCFF_X7_Y24_N29; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u5|out_clk'
+        Info: 7: + IC(1.102 ns) + CELL(0.970 ns) = 12.891 ns; Loc. = LCFF_X6_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u6|out_clk'
+        Info: 8: + IC(0.386 ns) + CELL(0.970 ns) = 14.247 ns; Loc. = LCFF_X6_Y20_N21; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u7|out_clk'
+        Info: 9: + IC(1.021 ns) + CELL(0.970 ns) = 16.238 ns; Loc. = LCFF_X3_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u8|out_clk'
+        Info: 10: + IC(0.386 ns) + CELL(0.970 ns) = 17.594 ns; Loc. = LCFF_X3_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u9|out_clk'
+        Info: 11: + IC(0.603 ns) + CELL(0.970 ns) = 19.167 ns; Loc. = LCFF_X2_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u10|out_clk'
+        Info: 12: + IC(0.386 ns) + CELL(0.970 ns) = 20.523 ns; Loc. = LCFF_X2_Y20_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u11|out_clk'
+        Info: 13: + IC(0.603 ns) + CELL(0.970 ns) = 22.096 ns; Loc. = LCFF_X1_Y20_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u12|out_clk'
+        Info: 14: + IC(0.386 ns) + CELL(0.970 ns) = 23.452 ns; Loc. = LCFF_X1_Y20_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u13|out_clk'
+        Info: 15: + IC(0.682 ns) + CELL(0.970 ns) = 25.104 ns; Loc. = LCFF_X1_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u14|out_clk'
+        Info: 16: + IC(0.386 ns) + CELL(0.970 ns) = 26.460 ns; Loc. = LCFF_X1_Y19_N15; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u15|out_clk'
+        Info: 17: + IC(0.599 ns) + CELL(0.970 ns) = 28.029 ns; Loc. = LCFF_X2_Y19_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u16|out_clk'
+        Info: 18: + IC(0.386 ns) + CELL(0.970 ns) = 29.385 ns; Loc. = LCFF_X2_Y19_N17; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u17|out_clk'
+        Info: 19: + IC(1.018 ns) + CELL(0.970 ns) = 31.373 ns; Loc. = LCFF_X3_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u18|out_clk'
+        Info: 20: + IC(0.386 ns) + CELL(0.970 ns) = 32.729 ns; Loc. = LCFF_X3_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u19|out_clk'
+        Info: 21: + IC(0.603 ns) + CELL(0.970 ns) = 34.302 ns; Loc. = LCFF_X2_Y18_N9; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u20|out_clk'
+        Info: 22: + IC(0.386 ns) + CELL(0.970 ns) = 35.658 ns; Loc. = LCFF_X2_Y18_N31; Fanout = 2; REG Node = 'clockDivision:u0|singleClkDiv:u21|out_clk'
+        Info: 23: + IC(0.602 ns) + CELL(0.970 ns) = 37.230 ns; Loc. = LCFF_X1_Y18_N31; Fanout = 3; REG Node = 'clockDivision:u0|singleClkDiv:u22|out_clk'
+        Info: 24: + IC(5.015 ns) + CELL(0.000 ns) = 42.245 ns; Loc. = CLKCTRL_G3; Fanout = 528; COMB Node = 'clockDivision:u0|singleClkDiv:u22|out_clk~clkctrl'
+        Info: 25: + IC(1.064 ns) + CELL(0.666 ns) = 43.975 ns; Loc. = LCFF_X23_Y18_N13; Fanout = 52; REG Node = 'state.s0'
+        Info: Total cell delay = 23.166 ns ( 52.68 % )
+        Info: Total interconnect delay = 20.809 ns ( 47.32 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 10.151 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y18_N13; Fanout = 52; REG Node = 'state.s0'
+        Info: 2: + IC(4.751 ns) + CELL(0.624 ns) = 5.375 ns; Loc. = LCCOMB_X38_Y20_N20; Fanout = 1; COMB Node = 'seg2~1'
+        Info: 3: + IC(1.650 ns) + CELL(3.126 ns) = 10.151 ns; Loc. = PIN_162; Fanout = 0; PIN Node = 'seg2[5]'
+        Info: Total cell delay = 3.750 ns ( 36.94 % )
+        Info: Total interconnect delay = 6.401 ns ( 63.06 % )
+Info: th for register "vga_rom:u1|vga640480:u1|y[2]" (data pin = "reset", clock pin = "clk") is 2.369 ns
+    Info: + Longest clock path from clock "clk" to destination register is 7.177 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.160 ns) = 1.160 ns; Loc. = PIN_210; Fanout = 4; CLK Node = 'clk'
+        Info: 2: + IC(0.930 ns) + CELL(0.970 ns) = 3.060 ns; Loc. = LCFF_X25_Y26_N9; Fanout = 2; REG Node = 'vga_rom:u1|vga640480:u1|clk1'
+        Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.416 ns; Loc. = LCFF_X25_Y26_N13; Fanout = 2; REG Node = 'vga_rom:u1|vga640480:u1|clk'
+        Info: 4: + IC(1.022 ns) + CELL(0.000 ns) = 5.438 ns; Loc. = CLKCTRL_G11; Fanout = 500; COMB Node = 'vga_rom:u1|vga640480:u1|clk~clkctrl'
+        Info: 5: + IC(1.073 ns) + CELL(0.666 ns) = 7.177 ns; Loc. = LCFF_X30_Y2_N11; Fanout = 52; REG Node = 'vga_rom:u1|vga640480:u1|y[2]'
+        Info: Total cell delay = 3.766 ns ( 52.47 % )
+        Info: Total interconnect delay = 3.411 ns ( 47.53 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 5.114 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.170 ns) = 1.170 ns; Loc. = PIN_153; Fanout = 2; PIN Node = 'reset'
+        Info: 2: + IC(2.557 ns) + CELL(0.206 ns) = 3.933 ns; Loc. = LCCOMB_X30_Y2_N2; Fanout = 20; COMB Node = 'vga_rom:u1|vga640480:u1|y[9]~52'
+        Info: 3: + IC(0.326 ns) + CELL(0.855 ns) = 5.114 ns; Loc. = LCFF_X30_Y2_N11; Fanout = 52; REG Node = 'vga_rom:u1|vga640480:u1|y[2]'
+        Info: Total cell delay = 2.231 ns ( 43.63 % )
+        Info: Total interconnect delay = 2.883 ns ( 56.37 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 254 megabytes
+    Info: Processing ended: Thu Jun 11 19:47:46 2015
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+

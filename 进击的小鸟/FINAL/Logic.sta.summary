@@ -1,0 +1,941 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -137.176
+TNS   : -21983.605
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -34.926
+TNS   : -746.911
+
+Type  : Slow Model Setup 'vga_rom:u1|vga640480:u1|clk'
+Slack : -14.139
+TNS   : -454.115
+
+Type  : Slow Model Setup 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -7.211
+TNS   : -310.546
+
+Type  : Slow Model Setup 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : -5.832
+TNS   : -97.503
+
+Type  : Slow Model Setup 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -4.763
+TNS   : -49.909
+
+Type  : Slow Model Setup 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : -4.104
+TNS   : -4.104
+
+Type  : Slow Model Setup 'clk'
+Slack : -2.675
+TNS   : -36.061
+
+Type  : Slow Model Setup 'BCLK'
+Slack : -2.328
+TNS   : -89.906
+
+Type  : Slow Model Setup 'clk24M'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'vga_rom:u1|vga640480:u1|clk1'
+Slack : 1.091
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : 1.092
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : 1.092
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : 1.315
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : 1.387
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : 1.398
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : 1.737
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.956
+TNS   : -11.817
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -2.708
+TNS   : -2.708
+
+Type  : Slow Model Hold 'BCLK'
+Slack : -2.667
+TNS   : -54.881
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -2.534
+TNS   : -11.724
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : -1.503
+TNS   : -1.503
+
+Type  : Slow Model Hold 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -1.330
+TNS   : -15.302
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : -1.164
+TNS   : -1.164
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : -1.153
+TNS   : -1.153
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : -1.081
+TNS   : -1.081
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : -1.074
+TNS   : -1.074
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : -0.858
+TNS   : -0.858
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : -0.858
+TNS   : -0.858
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'vga_rom:u1|vga640480:u1|clk1'
+Slack : -0.857
+TNS   : -0.857
+
+Type  : Slow Model Hold 'clk24M'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'vga_rom:u1|vga640480:u1|clk'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : 1.631
+TNS   : 0.000
+
+Type  : Slow Model Hold 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : 3.696
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'vga_rom:u1|vga640480:u1|clk'
+Slack : -1.064
+TNS   : -27.702
+
+Type  : Slow Model Recovery 'clk'
+Slack : -0.034
+TNS   : -0.034
+
+Type  : Slow Model Recovery 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.030
+TNS   : -0.030
+
+Type  : Slow Model Recovery 'BCLK'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Slow Model Removal 'BCLK'
+Slack : -1.543
+TNS   : -39.264
+
+Type  : Slow Model Removal 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.250
+TNS   : -0.750
+
+Type  : Slow Model Removal 'clk'
+Slack : 0.230
+TNS   : 0.000
+
+Type  : Slow Model Removal 'vga_rom:u1|vga640480:u1|clk'
+Slack : 0.820
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -28.653
+
+Type  : Slow Model Minimum Pulse Width 'clk24M'
+Slack : -1.941
+TNS   : -3.425
+
+Type  : Slow Model Minimum Pulse Width 'reset'
+Slack : -1.941
+TNS   : -1.941
+
+Type  : Slow Model Minimum Pulse Width 'BCLK'
+Slack : -1.777
+TNS   : -77.461
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -0.742
+TNS   : -848.848
+
+Type  : Slow Model Minimum Pulse Width 'vga_rom:u1|vga640480:u1|clk'
+Slack : -0.742
+TNS   : -146.916
+
+Type  : Slow Model Minimum Pulse Width 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -0.742
+TNS   : -94.976
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -0.742
+TNS   : -35.616
+
+Type  : Slow Model Minimum Pulse Width 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.742
+TNS   : -25.228
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'vga_rom:u1|vga640480:u1|clk1'
+Slack : -0.742
+TNS   : -1.484
+
+Type  : Slow Model Minimum Pulse Width 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -39.201
+TNS   : -6355.589
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -10.278
+TNS   : -218.103
+
+Type  : Fast Model Setup 'vga_rom:u1|vga640480:u1|clk'
+Slack : -4.069
+TNS   : -109.108
+
+Type  : Fast Model Setup 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -2.065
+TNS   : -64.166
+
+Type  : Fast Model Setup 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : -1.700
+TNS   : -26.181
+
+Type  : Fast Model Setup 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : -1.481
+TNS   : -1.481
+
+Type  : Fast Model Setup 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.820
+TNS   : -4.705
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.246
+TNS   : -3.021
+
+Type  : Fast Model Setup 'BCLK'
+Slack : -0.156
+TNS   : -1.212
+
+Type  : Fast Model Setup 'clk24M'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'vga_rom:u1|vga640480:u1|clk1'
+Slack : 0.773
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : 0.774
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : 0.774
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : 0.845
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : 0.848
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : 0.854
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : 0.857
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : 0.955
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.776
+TNS   : -7.110
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -1.534
+TNS   : -1.534
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -1.424
+TNS   : -7.899
+
+Type  : Fast Model Hold 'BCLK'
+Slack : -1.387
+TNS   : -44.155
+
+Type  : Fast Model Hold 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -1.104
+TNS   : -20.919
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : -0.575
+TNS   : -0.575
+
+Type  : Fast Model Hold 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.568
+TNS   : -4.485
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : -0.477
+TNS   : -0.477
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : -0.474
+TNS   : -0.474
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : -0.468
+TNS   : -0.468
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : -0.465
+TNS   : -0.465
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : -0.394
+TNS   : -0.394
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : -0.394
+TNS   : -0.394
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'vga_rom:u1|vga640480:u1|clk1'
+Slack : -0.393
+TNS   : -0.393
+
+Type  : Fast Model Hold 'clk24M'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'vga_rom:u1|vga640480:u1|clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : 0.936
+TNS   : 0.000
+
+Type  : Fast Model Hold 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : 2.075
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'vga_rom:u1|vga640480:u1|clk'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'BCLK'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk'
+Slack : 0.815
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : 1.229
+TNS   : 0.000
+
+Type  : Fast Model Removal 'BCLK'
+Slack : -0.931
+TNS   : -23.619
+
+Type  : Fast Model Removal 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.638
+TNS   : -3.828
+
+Type  : Fast Model Removal 'clk'
+Slack : -0.462
+TNS   : -1.359
+
+Type  : Fast Model Removal 'vga_rom:u1|vga640480:u1|clk'
+Slack : -0.027
+TNS   : -0.318
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -19.380
+
+Type  : Fast Model Minimum Pulse Width 'clk24M'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 'reset'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'BCLK'
+Slack : -1.222
+TNS   : -52.222
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u22|out_clk'
+Slack : -0.500
+TNS   : -572.000
+
+Type  : Fast Model Minimum Pulse Width 'vga_rom:u1|vga640480:u1|clk'
+Slack : -0.500
+TNS   : -99.000
+
+Type  : Fast Model Minimum Pulse Width 'wm8731_controller:u2|i2s_to_parallel:u2|ready'
+Slack : -0.500
+TNS   : -64.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u2|out_clk'
+Slack : -0.500
+TNS   : -24.000
+
+Type  : Fast Model Minimum Pulse Width 'wm8731_controller:u2|frequency100M_to_20K:c1|clk_20KHz_temp'
+Slack : -0.500
+TNS   : -17.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u10|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u11|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u12|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u13|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u14|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u15|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u16|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u17|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u18|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u19|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u1|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u20|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u21|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u23|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u24|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u25|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u26|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u27|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u3|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u4|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u5|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u6|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u7|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u8|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'clockDivision:u0|singleClkDiv:u9|out_clk'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'vga_rom:u1|vga640480:u1|clk1'
+Slack : -0.500
+TNS   : -1.000
+
+Type  : Fast Model Minimum Pulse Width 'wm8731_controller:u2|audio_analyse:u3|data_com[23]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'wm8731_controller:u2|cur_state.transmit_audio'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------
